@@ -1,0 +1,115 @@
+[
+    {
+        "db_id": "world_1",
+        "question": "What are the names of all the countries that became independent after 1950?",
+        "query": "SELECT Name FROM country WHERE IndepYear  >  1950",
+        "predicted_table_qa_data": "[[\"Afghanistan\", \"1975\"], [\"Angola\", \"1975\"], [\"Antigua and Barbuda\", \"1981\"], [\"American Samoa\", \"NULL\"], [\"Armenia\", \"1991\"], [\"Australia\", \"1901\"], [\"Austria\", \"1918\"], [\"Azerbaijan\", \"1991\"], [\"Burundi\", \"1962\"], [\"Belarus\", \"1991\"], [\"Benin\", \"1960\"], [\"Bulgaria\", \"1908\"], [\"Bahrain\", \"1971\"], [\"Bahamas\", \"1973\"], [\"Bosnia and Herzegovina\", \"1992\"], [\"Botswana\", \"1966\"], [\"Belize\", \"1981\"], [\"Brunei Darussalam\", \"1984\"], [\"Cambodia\", \"1993\"], [\"Cape Verde\", \"1975\"], [\"Cook Islands\", \"NONE\"], [\"Cyprus\", \"1960\"], [\"Czech Republic\", \"1993\"], [\"Denmark\", \"1660\"], [\"Dominica\", \"1978\"], [\"East Timor\", \"2002\"], [\"Eritrea\", \"1993\"], [\"Estonia\", \"1991\"], [\"Fiji\", \"1970\"], [\"Finland\", \"1917\"], [\"Gabon\", \"1960\"], [\"Georgia\", \"1991\"], [\"Germany\", \"1955\"], [\"Ghana\", \"1957\"], [\"Greece\", \"1821\"], [\"Guam\", \"NULL\"], [\"Guinea\", \"1958\"], [\"Guinea-Bissau\", \"1974\"], [\"Guyana\", \"1966\"], [\"Iceland\", \"1944\"], [\"India\", \"1947\"], [\"Indonesia\", \"1945\"], [\"Iran\", \"1925\"], [\"Iraq\", \"1932\"], [\"Ireland\", \"1922\"], [\"Israel\", \"1948\"], [\"Italy\", \"1861\"], [\"Jamaica\", \"1962\"], [\"Japan\", \"660 AD\"], [\"Jordan\", \"1946\"], [\"Kazakhstan\", \"1991\"], [\"Kenya\", \"1963\"], [\"Kiribati\", \"1979\"], [\"Korea, North\", \"1948\"], [\"Korea, South\", \"1948\"], [\"Kuwait\", \"1961\"], [\"Kyrgyzstan\", \"1991\"], [\"Laos\", \"1953\"], [\"Latvia\", \"1918\"], [\"Lebanon\", \"1920\"], [\"Lesotho\", \"1966\"], [\"Liberia\", \"1847\"], [\"Libya\", \"1951\"], [\"Liechtenstein\", \"1719\"], [\"Lithuania\", \"1918\"], [\"Luxembourg\", \"1890\"], [\"Macedonia\", \"1991\"], [\"Madagascar\", \"1960\"], [\"Malawi\", \"1964\"], [\"Malaysia\", \"1957\"], [\"Maldives\", \"1965\"], [\"Mali\", \"1960\"], [\"Malta\", \"1964\"], [\"Marshall Islands\", \"1986\"], [\"Mauritania\", \"1958\"], [\"Mauritius\", \"1968\"], [\"Mexico\", \"1810\"], [\"Micronesia, Federated States of\", \"1986\"], [\"Moldova\", \"1991\"], [\"Monaco\", \"1861\"], [\"Mongolia\", \"1921\"], [\"Montenegro\", \"2006\"], [\"Morocco\", \"1956\"], [\"Mozambique\", \"1975\"], [\"Myanmar\", \"1948\"], [\"Namibia\", \"1990\"], [\"Nauru\", \"1968\"], [\"Nepal\", \"1768\"], [\"Nicaragua\", \"1821\"], [\"Niger\", \"1960\"], [\"Nigeria\", \"1960\"], [\"North Korea\", \"1948\"], [\"Norway\", \"1905\"], [\"Oman\", \"1971\"], [\"Pakistan\", \"1947\"], [\"Palau\", \"1994\"], [\"Panama\", \"1903\"], [\"Papua New Guinea\", \"1975\"], [\"Paraguay\", \"1811\"], [\"Peru\", \"1821\"], [\"Philippines\", \"1946\"], [\"Poland\", \"1918\"], [\"Portugal\", \"1140\"], [\"Qatar\", \"1971\"], [\"Republic of the Congo\", \"1960\"], [\"Romania\", \"1878\"], [\"Russia\", \"1991\"], [\"Rwanda\", \"1962\"], [\"Saint Kitts and Nevis\", \"1983\"], [\"Saint Lucia\", \"1979\"], [\"Saint Vincent and the Grenadines\", \"1979\"], [\"Samoa\", \"1962\"], [\"San Marino\", \"885\"], [\"Sao Tome and Principe\", \"1975\"], [\"Saudi Arabia\", \"1932\"], [\"Senegal\", \"1960\"], [\"Serbia\", \"2006\"], [\"Seychelles\", \"1976\"], [\"Sierra Leone\", \"1961\"], [\"Singapore\", \"1963\"], [\"Slovakia\", \"1993\"], [\"Slovenia\", \"1991\"], [\"Solomon Islands\", \"1978\"], [\"Somalia\", \"1960\"], [\"South Africa\", \"1910\"], [\"South Sudan\", \"2011\"], [\"Spain\", \"1479\"], [\"Sri Lanka\", \"1948\"], [\"Sudan\", \"1956\"], [\"Suriname\", \"1975\"], [\"Swaziland\", \"1968\"], [\"Sweden\", \"1814\"], [\"Switzerland\", \"1291\"], [\"Syria\", \"1932\"], [\"Tajikistan\", \"1991\"], [\"Tanzania\", \"1961\"], [\"Thailand\", \"1350\"], [\"Timor-Leste\", \"2002\"], [\"Togo\", \"1960\"], [\"Tonga\", \"1970\"], [\"Trinidad and Tobago\", \"1962\"], [\"Tunisia\", \"1956\"], [\"Turkey\", \"1923\"], [\"Turkmenistan\", \"1991\"], [\"Tuvalu\", \"1978\"], [\"Uganda\", \"1962\"], [\"Ukraine\", \"1991\"], [\"United Arab Emirates\", \"1971\"], [\"United Kingdom\", \"1707\"], [\"Uruguay\", \"1825\"], [\"USA\", \"1776\"], [\"Vanuatu\", \"1980\"], [\"Vatican City\", \"1929\"], [\"Venezuela\", \"1811\"], [\"Vietnam\", \"1945\"], [\"Yemen, North\", \"1962\"], [\"Yemen, South\", \"1967\"], [\"Zambia\", \"1964\"], [\"Zimbabwe\", \"1980\"]]",
+        "oracle_tables_used": [
+            "country"
+        ]
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the average life expectancy in African countries that are republics?",
+        "query": "SELECT avg(LifeExpectancy) FROM country WHERE Continent  =  \"Africa\" AND GovernmentForm  =  \"Republic\"",
+        "predicted_table_qa_data": "[[\"AverageLifeExpectancy\", 46.066666666666664]]",
+        "oracle_tables_used": [
+            "country"
+        ]
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which language is the most popular on the Asian continent?",
+        "query": "SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Continent  =  \"Asia\" GROUP BY T2.Language ORDER BY COUNT (*) DESC LIMIT 1",
+        "predicted_table_qa_data": "[[\"Language\", \"Percentage\"], [\"Arabic\", 42.0]]",
+        "oracle_tables_used": [
+            "country",
+            "countrylanguage"
+        ]
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which language is the most popular in Aruba?",
+        "query": "SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Name  =  \"Aruba\" ORDER BY Percentage DESC LIMIT 1",
+        "predicted_table_qa_data": "[[\"Papiamento\", 76.7]]",
+        "oracle_tables_used": [
+            "country",
+            "countrylanguage"
+        ]
+    },
+    {
+        "db_id": "world_1",
+        "question": "Find the government form name and total population for each government form whose average life expectancy is longer than 72.",
+        "query": "SELECT sum(Population) ,  GovernmentForm FROM country GROUP BY GovernmentForm HAVING avg(LifeExpectancy)  >  72",
+        "predicted_table_qa_data": "[[\"GovernmentForm\", \"TotalPopulation\"],\n [\"Constitutional Monarchy, Federation\", 10239000],\n [\"Parliamentary Coprincipality\", 78000],\n [\"Monarchy (Emirate)\", 617000]]",
+        "oracle_tables_used": [
+            "country"
+        ]
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which countries have greater area than that of any country in Europe?",
+        "query": "SELECT Name FROM country WHERE SurfaceArea  >  (SELECT min(SurfaceArea) FROM country WHERE Continent  =  \"Europe\")",
+        "predicted_table_qa_data": "[[\"ARG\", \"2780400\"], [\"AGO\", \"1246700\"], [\"BGD\", \"143998\"], [\"RUS\", \"17098242\"]] \n\nNote: The list includes Argentina (greater than all European areas), Angola, Bangladesh, and Russia (the largest country by area). Russia is not in the provided table but is included for completeness as it exceeds all listed European countries.",
+        "oracle_tables_used": [
+            "country"
+        ]
+    },
+    {
+        "db_id": "orchestra",
+        "question": "How many conductors are there?",
+        "query": "SELECT count(*) FROM conductor",
+        "predicted_table_qa_data": "[[\"Count\", 12]]",
+        "oracle_tables_used": [
+            "conductor"
+        ]
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the names of conductors whose nationalities are not \"USA\"?",
+        "query": "SELECT Name FROM conductor WHERE Nationality != 'USA'",
+        "predicted_table_qa_data": "[[\"Igor Stravinsky\", 41, \"UK\", 11], [\"Colin Davis\", 42, \"USA\", 6], [\"Paul Jorgensen\", 43, \"UK\", 11], [\"Charles Dutoit\", 43, \"France\", 12], [\"Pierre Boulez\", 49, \"UK\", 11], [\"Valeri Gergiev\", 47, \"USA\", 16], [\"Robert Craft\", 63, \"UK\", 21], [\"Michael Tilson Thomas\", 42, \"France\", 12]]",
+        "oracle_tables_used": [
+            "conductor"
+        ]
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the maximum and minimum share of performances whose type is not \"Live final\".",
+        "query": "SELECT max(SHARE) ,  min(SHARE) FROM performance WHERE TYPE != \"Live final\"",
+        "predicted_table_qa_data": "[[\"Maximum Share\", 40.9], [\"Minimum Share\", 22.7]]",
+        "oracle_tables_used": [
+            "performance"
+        ]
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the names of conductors as well as the corresonding orchestras that they have conducted?",
+        "query": "SELECT T1.Name ,  T2.Orchestra FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID",
+        "predicted_table_qa_data": "[[\"Antal Dor\u00e1ti\", \"London Symphony Orchestra\"], [\"Igor Stravinsky\", \"Columbia Symphony Orchestra\"], [\"Colin Davis\", \"Royal Concertgebouw Orchestra\"], [\"Paul Jorgensen\", \"Royal Danish Orchestra\"], [\"Antal Brown\", \"Detroit Symphony Orchestra\"], [\"Charles Dutoit\", \"Montreal Symphony Orchestra\"], [\"Gerard Schwarz\", \"Seattle Symphony Orchestra\"], [\"Pierre Boulez\", \"Chicago Symphony Orchestra\"], [\"Valeri Gergiev\", \"Kirov Orchestra\"], [\"Robert Craft\", \"Philharmonia Orchestra\"], [\"Seiji Ozawa\", \"Orchestre de Paris\"], [\"Michael Tilson Thomas\", \"San Francisco Symphony Orchestra\"]]",
+        "oracle_tables_used": [
+            "conductor",
+            "orchestra"
+        ]
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What is the name of the conductor who has conducted the most orchestras?",
+        "query": "SELECT T1.Name FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID GROUP BY T2.Conductor_ID ORDER BY COUNT(*) DESC LIMIT 1",
+        "predicted_table_qa_data": "[[\"Valeri Gergiev\"]]",
+        "oracle_tables_used": [
+            "conductor",
+            "orchestra"
+        ]
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the orchestras that do not have any performances?",
+        "query": "SELECT Orchestra FROM orchestra WHERE Orchestra_ID NOT IN (SELECT Orchestra_ID FROM performance)",
+        "predicted_table_qa_data": "[[\"London Symphony Orchestra\"], [\"Columbia Symphony Orchestra\"], [\"Royal Concertgebouw Orchestra\"], [\"Royal Danish Orchestra\"], [\"Detroit Symphony Orchestra\"], [\"Montreal Symphony Orchestra\"], [\"Seattle Symphony Orchestra\"], [\"Chicago Symphony Orchestra\"], [\"Kirov Orchestra\"], [\"Philharmonia Orchestra\"]]",
+        "oracle_tables_used": [
+            "orchestra",
+            "performance"
+        ]
+    }
+]

@@ -1,0 +1,802 @@
+[
+    {
+        "db_id": "world_1",
+        "question": "What are the names of all the countries that became independent after 1950?",
+        "query": "SELECT Name FROM country WHERE IndepYear  >  1950"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Give the names of the nations that were founded after 1950.",
+        "query": "SELECT Name FROM country WHERE IndepYear  >  1950"
+    },
+    {
+        "db_id": "world_1",
+        "question": "How many countries have a republic as their form of government?",
+        "query": "SELECT count(*) FROM country WHERE GovernmentForm  =  \"Republic\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "How many countries have governments that are republics?",
+        "query": "SELECT count(*) FROM country WHERE GovernmentForm  =  \"Republic\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the total surface area of the countries in the Caribbean region?",
+        "query": "SELECT sum(SurfaceArea) FROM country WHERE Region  =  \"Caribbean\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "How much surface area do the countires in the Carribean cover together?",
+        "query": "SELECT sum(SurfaceArea) FROM country WHERE Region  =  \"Caribbean\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which continent is Anguilla in?",
+        "query": "SELECT Continent FROM country WHERE Name  =  \"Anguilla\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the continent name which Anguilla belongs to?",
+        "query": "SELECT Continent FROM country WHERE Name  =  \"Anguilla\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which region is the city Kabul located in?",
+        "query": "SELECT Region FROM country AS T1 JOIN city AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Name  =  \"Kabul\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What region is Kabul in?",
+        "query": "SELECT Region FROM country AS T1 JOIN city AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Name  =  \"Kabul\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which language is the most popular in Aruba?",
+        "query": "SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Name  =  \"Aruba\" ORDER BY Percentage DESC LIMIT 1"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What language is predominantly spoken in Aruba?",
+        "query": "SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Name  =  \"Aruba\" ORDER BY Percentage DESC LIMIT 1"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the population and life expectancies in Brazil?",
+        "query": "SELECT Population ,  LifeExpectancy FROM country WHERE Name  =  \"Brazil\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "Give me Brazil\u2019s population and life expectancies.",
+        "query": "SELECT Population ,  LifeExpectancy FROM country WHERE Name  =  \"Brazil\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the region and population of Angola?",
+        "query": "SELECT Population ,  Region FROM country WHERE Name  =  \"Angola\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What region does Angola belong to and what is its population?",
+        "query": "SELECT Population ,  Region FROM country WHERE Name  =  \"Angola\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the average expected life expectancy for countries in the region of Central Africa?",
+        "query": "SELECT avg(LifeExpectancy) FROM country WHERE Region  =  \"Central Africa\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "How long is the people\u2019s average life expectancy in Central Africa?",
+        "query": "SELECT avg(LifeExpectancy) FROM country WHERE Region  =  \"Central Africa\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the name of country that has the shortest life expectancy in Asia?",
+        "query": "SELECT Name FROM country WHERE Continent  =  \"Asia\" ORDER BY LifeExpectancy LIMIT 1"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Give the name of the country in Asia with the lowest life expectancy.",
+        "query": "SELECT Name FROM country WHERE Continent  =  \"Asia\" ORDER BY LifeExpectancy LIMIT 1"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the total population and maximum GNP in Asia?",
+        "query": "SELECT sum(Population) ,  max(GNP) FROM country WHERE Continent  =  \"Asia\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "How many people live in Asia, and what is the largest GNP among them?",
+        "query": "SELECT sum(Population) ,  max(GNP) FROM country WHERE Continent  =  \"Asia\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the average life expectancy in African countries that are republics?",
+        "query": "SELECT avg(LifeExpectancy) FROM country WHERE Continent  =  \"Africa\" AND GovernmentForm  =  \"Republic\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "Give the average life expectancy for countries in Africa which are republics?",
+        "query": "SELECT avg(LifeExpectancy) FROM country WHERE Continent  =  \"Africa\" AND GovernmentForm  =  \"Republic\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the total surface area of the continents Asia and Europe?",
+        "query": "SELECT sum(SurfaceArea) FROM country WHERE Continent  =  \"Asia\" OR Continent  =  \"Europe\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "Give the total surface area covered by countries in Asia or Europe.",
+        "query": "SELECT sum(SurfaceArea) FROM country WHERE Continent  =  \"Asia\" OR Continent  =  \"Europe\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "How many people live in Gelderland district?",
+        "query": "SELECT sum(Population) FROM city WHERE District  =  \"Gelderland\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the total population of Gelderland district?",
+        "query": "SELECT sum(Population) FROM city WHERE District  =  \"Gelderland\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the average GNP and total population in all nations whose government is US territory?",
+        "query": "SELECT avg(GNP) ,  sum(population) FROM country WHERE GovernmentForm  =  \"US Territory\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "Give the mean GNP and total population of nations which are considered US territory.",
+        "query": "SELECT avg(GNP) ,  sum(population) FROM country WHERE GovernmentForm  =  \"US Territory\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "How many unique languages are spoken in the world?",
+        "query": "SELECT count(DISTINCT LANGUAGE) FROM countrylanguage"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the number of distinct languages used around the world?",
+        "query": "SELECT count(DISTINCT LANGUAGE) FROM countrylanguage"
+    },
+    {
+        "db_id": "world_1",
+        "question": "How many type of governments are in Africa?",
+        "query": "SELECT count(DISTINCT GovernmentForm) FROM country WHERE Continent  =  \"Africa\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "How many different forms of governments are there in Africa?",
+        "query": "SELECT count(DISTINCT GovernmentForm) FROM country WHERE Continent  =  \"Africa\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the total number of languages used in Aruba?",
+        "query": "SELECT COUNT(T2.Language) FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Name  =  \"Aruba\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "How many languages are spoken in Aruba?",
+        "query": "SELECT COUNT(T2.Language) FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Name  =  \"Aruba\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "How many official languages does Afghanistan have?",
+        "query": "SELECT COUNT(*) FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Name  =  \"Afghanistan\" AND IsOfficial  =  \"T\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "How many official languages are spoken in Afghanistan?",
+        "query": "SELECT COUNT(*) FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Name  =  \"Afghanistan\" AND IsOfficial  =  \"T\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is name of the country that speaks the largest number of languages?",
+        "query": "SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode GROUP BY T1.Name ORDER BY COUNT(*) DESC LIMIT 1"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Give the name of the nation that uses the greatest amount of languages.",
+        "query": "SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode GROUP BY T1.Name ORDER BY COUNT(*) DESC LIMIT 1"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which continent has the most diverse languages?",
+        "query": "SELECT T1.Continent FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode GROUP BY T1.Continent ORDER BY COUNT(*) DESC LIMIT 1"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which continent speaks the most languages?",
+        "query": "SELECT T1.Continent FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode GROUP BY T1.Continent ORDER BY COUNT(*) DESC LIMIT 1"
+    },
+    {
+        "db_id": "world_1",
+        "question": "How many countries speak both English and Dutch?",
+        "query": "SELECT COUNT(*) FROM (SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" INTERSECT SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"Dutch\")"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the number of nations that use English and Dutch?",
+        "query": "SELECT COUNT(*) FROM (SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" INTERSECT SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"Dutch\")"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the names of nations speak both English and French?",
+        "query": "SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" INTERSECT SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"French\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "Give the names of nations that speak both English and French.",
+        "query": "SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" INTERSECT SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"French\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the names of nations where both English and French are official languages?",
+        "query": "SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" AND T2.IsOfficial  =  \"T\" INTERSECT SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"French\" AND T2.IsOfficial  =  \"T\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "Give the names of countries with English and French as official languages.",
+        "query": "SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" AND T2.IsOfficial  =  \"T\" INTERSECT SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"French\" AND T2.IsOfficial  =  \"T\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the number of distinct continents where Chinese is spoken?",
+        "query": "SELECT COUNT( DISTINCT Continent) FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"Chinese\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "How many continents speak Chinese?",
+        "query": "SELECT COUNT( DISTINCT Continent) FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"Chinese\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the regions that use English or Dutch?",
+        "query": "SELECT DISTINCT T1.Region FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" OR T2.Language  =  \"Dutch\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which regions speak Dutch or English?",
+        "query": "SELECT DISTINCT T1.Region FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" OR T2.Language  =  \"Dutch\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the countries where either English or Dutch is the official language ?",
+        "query": "select t1.name from country as t1 join countrylanguage as t2 on t1.code  =  t2.countrycode where t2.language  =  \"english\" and isofficial  =  \"t\" union select t1.name from country as t1 join countrylanguage as t2 on t1.code  =  t2.countrycode where t2.language  =  \"dutch\" and isofficial  =  \"t\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which countries have either English or Dutch as an official language?",
+        "query": "SELECT * FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" AND IsOfficial  =  \"T\" UNION SELECT * FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"Dutch\" AND IsOfficial  =  \"T\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which language is the most popular on the Asian continent?",
+        "query": "SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Continent  =  \"Asia\" GROUP BY T2.Language ORDER BY COUNT (*) DESC LIMIT 1"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the language that is used by the largest number of Asian nations?",
+        "query": "SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Continent  =  \"Asia\" GROUP BY T2.Language ORDER BY COUNT (*) DESC LIMIT 1"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which languages are spoken by only one country in republic governments?",
+        "query": "SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.GovernmentForm  =  \"Republic\" GROUP BY T2.Language HAVING COUNT(*)  =  1"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What languages are only used by a single country with a republic government?",
+        "query": "SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.GovernmentForm  =  \"Republic\" GROUP BY T2.Language HAVING COUNT(*)  =  1"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Find the city with the largest population that uses English.",
+        "query": "SELECT T1.Name ,  T1.Population FROM city AS T1 JOIN countrylanguage AS T2 ON T1.CountryCode  =  T2.CountryCode WHERE T2.Language  =  \"English\" ORDER BY T1.Population DESC LIMIT 1"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the most populace city that speaks English?",
+        "query": "SELECT T1.Name ,  T1.Population FROM city AS T1 JOIN countrylanguage AS T2 ON T1.CountryCode  =  T2.CountryCode WHERE T2.Language  =  \"English\" ORDER BY T1.Population DESC LIMIT 1"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Find the name, population and expected life length of asian country with the largest area?",
+        "query": "SELECT Name ,  Population ,  LifeExpectancy FROM country WHERE Continent  =  \"Asia\" ORDER BY SurfaceArea DESC LIMIT 1"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the name, population, and life expectancy of the largest Asian country by land?",
+        "query": "SELECT Name ,  Population ,  LifeExpectancy FROM country WHERE Continent  =  \"Asia\" ORDER BY SurfaceArea DESC LIMIT 1"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is average life expectancy in the countries where English is not the official language?",
+        "query": "SELECT avg(LifeExpectancy) FROM country WHERE Name NOT IN (SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" AND T2.IsOfficial  =  \"T\")"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Give the mean life expectancy of countries in which English is not the official language.",
+        "query": "SELECT avg(LifeExpectancy) FROM country WHERE Name NOT IN (SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" AND T2.IsOfficial  =  \"T\")"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the total number of people living in the nations that do not use English?",
+        "query": "SELECT sum(Population) FROM country WHERE Name NOT IN (SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\")"
+    },
+    {
+        "db_id": "world_1",
+        "question": "How many people live in countries that do not speak English?",
+        "query": "SELECT sum(Population) FROM country WHERE Name NOT IN (SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\")"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the official language spoken in the country whose head of state is Beatrix?",
+        "query": "SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.HeadOfState  =  \"Beatrix\" AND T2.IsOfficial  =  \"T\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the official language used in the country the name of whose head of state is Beatrix.",
+        "query": "SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.HeadOfState  =  \"Beatrix\" AND T2.IsOfficial  =  \"T\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the total number of unique official languages spoken in the countries that are founded before 1930?",
+        "query": "SELECT count(DISTINCT T2.Language) FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE  IndepYear  <  1930 AND T2.IsOfficial  =  \"T\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "For the countries founded before 1930, what is the total number of distinct official languages?",
+        "query": "SELECT count(DISTINCT T2.Language) FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE  IndepYear  <  1930 AND T2.IsOfficial  =  \"T\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the countries that have greater surface area than any country in Europe?",
+        "query": "SELECT Name FROM country WHERE SurfaceArea  >  (SELECT min(SurfaceArea) FROM country WHERE Continent  =  \"Europe\")"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which countries have greater area than that of any country in Europe?",
+        "query": "SELECT Name FROM country WHERE SurfaceArea  >  (SELECT min(SurfaceArea) FROM country WHERE Continent  =  \"Europe\")"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the African countries that have a  population less than any country in Asia?",
+        "query": "SELECT Name FROM country WHERE Continent  =  \"Africa\"  AND population  <  (SELECT max(population) FROM country WHERE Continent  =  \"Asia\")"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which African countries have a smaller population than that of any country in Asia?",
+        "query": "SELECT Name FROM country WHERE Continent  =  \"Africa\"  AND population  <  (SELECT min(population) FROM country WHERE Continent  =  \"Asia\")"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which Asian countries have a population that is larger than any country in Africa?",
+        "query": "SELECT Name FROM country WHERE Continent  =  \"Asia\"  AND population  >  (SELECT max(population) FROM country WHERE Continent  =  \"Africa\")"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the Asian countries which have a population larger than that of any country in Africa?",
+        "query": "SELECT Name FROM country WHERE Continent  =  \"Asia\"  AND population  >  (SELECT min(population) FROM country WHERE Continent  =  \"Africa\")"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the country codes for countries that do not speak English?",
+        "query": "SELECT CountryCode FROM countrylanguage EXCEPT SELECT CountryCode FROM countrylanguage WHERE LANGUAGE  =  \"English\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "Return the country codes for countries that do not speak English.",
+        "query": "SELECT CountryCode FROM countrylanguage EXCEPT SELECT CountryCode FROM countrylanguage WHERE LANGUAGE  =  \"English\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the country codes of countries where people use languages other than English?",
+        "query": "SELECT DISTINCT CountryCode FROM countrylanguage WHERE LANGUAGE != \"English\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "Give the country codes for countries in which people speak langauges that are not English.",
+        "query": "SELECT DISTINCT CountryCode FROM countrylanguage WHERE LANGUAGE != \"English\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the codes of the countries that do not speak English and whose government forms are not Republic?",
+        "query": "SELECT Code FROM country WHERE GovernmentForm != \"Republic\" EXCEPT SELECT CountryCode FROM countrylanguage WHERE LANGUAGE  =  \"English\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "Return the codes of countries that do not speak English and do not have Republics for governments.",
+        "query": "SELECT Code FROM country WHERE GovernmentForm != \"Republic\" EXCEPT SELECT CountryCode FROM countrylanguage WHERE LANGUAGE  =  \"English\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which cities are in European countries where English is not the official language?",
+        "query": "SELECT DISTINCT T2.Name FROM country AS T1 JOIN city AS T2 ON T2.CountryCode  =  T1.Code WHERE T1.Continent  =  'Europe' AND T1.Name NOT IN (SELECT T3.Name FROM country AS T3 JOIN countrylanguage AS T4 ON T3.Code  =  T4.CountryCode WHERE T4.IsOfficial  =  'T' AND T4.Language  =  'English')"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the names of cities in Europe for which English is not the official language?",
+        "query": "SELECT DISTINCT T2.Name FROM country AS T1 JOIN city AS T2 ON T2.CountryCode  =  T1.Code WHERE T1.Continent  =  'Europe' AND T1.Name NOT IN (SELECT T3.Name FROM country AS T3 JOIN countrylanguage AS T4 ON T3.Code  =  T4.CountryCode WHERE T4.IsOfficial  =  'T' AND T4.Language  =  'English')"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which unique cities are in Asian countries where Chinese is the official language ?",
+        "query": "select distinct t3.name from country as t1 join countrylanguage as t2 on t1.code  =  t2.countrycode join city as t3 on t1.code  =  t3.countrycode where t2.isofficial  =  't' and t2.language  =  'chinese' and t1.continent  =  \"asia\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "Return the different names of cities that are in Asia and for which Chinese is the official language.",
+        "query": "SELECT DISTINCT T3.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode JOIN city AS T3 ON T1.Code  =  T3.CountryCode WHERE T2.IsOfficial  =  'T' AND T2.Language  =  'Chinese' AND T1.Continent  =  \"Asia\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the name, independence year, and surface area of the country with the smallest population?",
+        "query": "SELECT Name ,  SurfaceArea ,  IndepYear FROM country ORDER BY Population LIMIT 1"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Give the name, year of independence, and surface area of the country that has the lowest population.",
+        "query": "SELECT Name ,  SurfaceArea ,  IndepYear FROM country ORDER BY Population LIMIT 1"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the population, name and leader of the country with the largest area?",
+        "query": "SELECT Name ,  population ,  HeadOfState FROM country ORDER BY SurfaceArea DESC LIMIT 1"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Give the name, population, and head of state for the country that has the largest area.",
+        "query": "SELECT Name ,  population ,  HeadOfState FROM country ORDER BY SurfaceArea DESC LIMIT 1"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Return the country name and the numbers of languages spoken for each country that speaks at least 3 languages.",
+        "query": "SELECT COUNT(T2.Language) ,  T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode GROUP BY T1.Name HAVING COUNT(*)  >  2"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the names of countries that speak more than 2 languages, as well as how many languages they speak?",
+        "query": "SELECT COUNT(T2.Language) ,  T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode GROUP BY T1.Name HAVING COUNT(*)  >  2"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Find the number of cities in each district whose population is greater than the average population of cities?",
+        "query": "SELECT count(*) ,  District FROM city WHERE Population  >  (SELECT avg(Population) FROM city) GROUP BY District"
+    },
+    {
+        "db_id": "world_1",
+        "question": "How many cities in each district have a population that is above the average population across all cities?",
+        "query": "SELECT count(*) ,  District FROM city WHERE Population  >  (SELECT avg(Population) FROM city) GROUP BY District"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Find the government form name and total population for each government form whose average life expectancy is longer than 72.",
+        "query": "SELECT sum(Population) ,  GovernmentForm FROM country GROUP BY GovernmentForm HAVING avg(LifeExpectancy)  >  72"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the different government forms and what is the total population of each for government forms that have an average life expectancy greater than 72?",
+        "query": "SELECT sum(Population) ,  GovernmentForm FROM country GROUP BY GovernmentForm HAVING avg(LifeExpectancy)  >  72"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Find the average life expectancy and total population for each continent where the average life expectancy is shorter than 72?",
+        "query": "SELECT sum(Population) ,  avg(LifeExpectancy) ,  Continent FROM country GROUP BY Continent HAVING avg(LifeExpectancy)  <  72"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the different continents and the total popuation and average life expectancy corresponding to each, for continents that have an average life expectancy less than 72?",
+        "query": "SELECT sum(Population) ,  avg(LifeExpectancy) ,  Continent FROM country GROUP BY Continent HAVING avg(LifeExpectancy)  <  72"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the names and areas of countries with the top 5 largest area?",
+        "query": "SELECT Name ,  SurfaceArea FROM country ORDER BY SurfaceArea DESC LIMIT 5"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Return the names and surface areas of the 5 largest countries.",
+        "query": "SELECT Name ,  SurfaceArea FROM country ORDER BY SurfaceArea DESC LIMIT 5"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are names of countries with the top 3 largest population?",
+        "query": "SELECT Name FROM country ORDER BY Population DESC LIMIT 3"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Return the names of the 3 most populated countries.",
+        "query": "SELECT Name FROM country ORDER BY Population DESC LIMIT 3"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the names of the nations with the 3 lowest populations?",
+        "query": "SELECT Name FROM country ORDER BY Population ASC LIMIT 3"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Return the names of the 3 countries with the fewest people.",
+        "query": "SELECT Name FROM country ORDER BY Population ASC LIMIT 3"
+    },
+    {
+        "db_id": "world_1",
+        "question": "how many countries are in Asia?",
+        "query": "SELECT count(*) FROM country WHERE continent  =  \"Asia\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "Count the number of countries in Asia.",
+        "query": "SELECT count(*) FROM country WHERE continent  =  \"Asia\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the names of the countries that are in the continent of Europe and have a population of 80000?",
+        "query": "SELECT Name FROM country WHERE continent  =  \"Europe\" AND Population  =  \"80000\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "Give the names of countries that are in Europe and have a population equal to 80000.",
+        "query": "SELECT Name FROM country WHERE continent  =  \"Europe\" AND Population  =  \"80000\""
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the total population and average area of countries in the continent of North America whose area is bigger than 3000 ?",
+        "query": "select sum(population) ,  avg(surfacearea) from country where continent  =  \"north america\" and surfacearea  >  3000"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Give the total population and average surface area corresponding to countries in North America that have a surface area greater than 3000 .",
+        "query": "select sum(population) ,  avg(surfacearea) from country where continent  =  \"north america\" and surfacearea  >  3000"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the cities whose population is between 160000 and 900000?",
+        "query": "SELECT name FROM city WHERE Population BETWEEN 160000 AND 900000"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Return the names of cities that have a population between 160000 and 900000 .",
+        "query": "select name from city where population between 160000 and 900000"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which language is spoken by the largest number of countries?",
+        "query": "SELECT LANGUAGE FROM countrylanguage GROUP BY LANGUAGE ORDER BY count(*) DESC LIMIT 1"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Give the language that is spoken in the most countries.",
+        "query": "SELECT LANGUAGE FROM countrylanguage GROUP BY LANGUAGE ORDER BY count(*) DESC LIMIT 1"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the language spoken by the largest percentage of people in each country?",
+        "query": "SELECT LANGUAGE ,  CountryCode ,  max(Percentage) FROM countrylanguage GROUP BY CountryCode"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the country codes of the different countries, and what are the languages spoken by the greatest percentage of people for each?",
+        "query": "SELECT LANGUAGE ,  CountryCode ,  max(Percentage) FROM countrylanguage GROUP BY CountryCode"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the total number of countries where Spanish is spoken by the largest percentage of people?",
+        "query": "SELECT count(*) ,   max(Percentage) FROM countrylanguage WHERE LANGUAGE  =  \"Spanish\" GROUP BY CountryCode"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Count the number of countries for which Spanish is the predominantly spoken language.",
+        "query": "SELECT count(*) ,   max(Percentage) FROM countrylanguage WHERE LANGUAGE  =  \"Spanish\" GROUP BY CountryCode"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What are the codes of countries where Spanish is spoken by the largest percentage of people?",
+        "query": "SELECT CountryCode ,  max(Percentage) FROM countrylanguage WHERE LANGUAGE  =  \"Spanish\" GROUP BY CountryCode"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Return the codes of countries for which Spanish is the predominantly spoken language.",
+        "query": "SELECT CountryCode ,  max(Percentage) FROM countrylanguage WHERE LANGUAGE  =  \"Spanish\" GROUP BY CountryCode"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "How many conductors are there?",
+        "query": "SELECT count(*) FROM conductor"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "Count the number of conductors.",
+        "query": "SELECT count(*) FROM conductor"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "List the names of conductors in ascending order of age.",
+        "query": "SELECT Name FROM conductor ORDER BY Age ASC"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the names of conductors, ordered by age?",
+        "query": "SELECT Name FROM conductor ORDER BY Age ASC"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the names of conductors whose nationalities are not \"USA\"?",
+        "query": "SELECT Name FROM conductor WHERE Nationality != 'USA'"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "Return the names of conductors that do not have the nationality \"USA\".",
+        "query": "SELECT Name FROM conductor WHERE Nationality != 'USA'"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the record companies of orchestras in descending order of years in which they were founded?",
+        "query": "SELECT Record_Company FROM orchestra ORDER BY Year_of_Founded DESC"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "Return the record companies of orchestras, sorted descending by the years in which they were founded.",
+        "query": "SELECT Record_Company FROM orchestra ORDER BY Year_of_Founded DESC"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What is the average attendance of shows?",
+        "query": "SELECT avg(Attendance) FROM SHOW"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "Return the average attendance across all shows.",
+        "query": "SELECT avg(Attendance) FROM SHOW"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the maximum and minimum share of performances whose type is not \"Live final\".",
+        "query": "SELECT max(SHARE) ,  min(SHARE) FROM performance WHERE TYPE != \"Live final\""
+    },
+    {
+        "db_id": "orchestra",
+        "question": "Return the maximum and minimum shares for performances that do not have the type \"Live final\".",
+        "query": "SELECT max(SHARE) ,  min(SHARE) FROM performance WHERE TYPE != \"Live final\""
+    },
+    {
+        "db_id": "orchestra",
+        "question": "How many different nationalities do conductors have?",
+        "query": "SELECT count(DISTINCT Nationality) FROM conductor"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "Count the number of different nationalities of conductors.",
+        "query": "SELECT count(DISTINCT Nationality) FROM conductor"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "List names of conductors in descending order of years of work.",
+        "query": "SELECT Name FROM conductor ORDER BY Year_of_Work DESC"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the names of conductors, sorted descending by the number of years they have worked?",
+        "query": "SELECT Name FROM conductor ORDER BY Year_of_Work DESC"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "List the name of the conductor with the most years of work.",
+        "query": "SELECT Name FROM conductor ORDER BY Year_of_Work DESC LIMIT 1"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What is the name of the conductor who has worked the greatest number of years?",
+        "query": "SELECT Name FROM conductor ORDER BY Year_of_Work DESC LIMIT 1"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "Show the names of conductors and the orchestras they have conducted.",
+        "query": "SELECT T1.Name ,  T2.Orchestra FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the names of conductors as well as the corresonding orchestras that they have conducted?",
+        "query": "SELECT T1.Name ,  T2.Orchestra FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "Show the names of conductors that have conducted more than one orchestras.",
+        "query": "SELECT T1.Name FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID GROUP BY T2.Conductor_ID HAVING COUNT(*)  >  1"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the names of conductors who have conducted at more than one orchestra?",
+        "query": "SELECT T1.Name FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID GROUP BY T2.Conductor_ID HAVING COUNT(*)  >  1"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "Show the name of the conductor that has conducted the most number of orchestras.",
+        "query": "SELECT T1.Name FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID GROUP BY T2.Conductor_ID ORDER BY COUNT(*) DESC LIMIT 1"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What is the name of the conductor who has conducted the most orchestras?",
+        "query": "SELECT T1.Name FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID GROUP BY T2.Conductor_ID ORDER BY COUNT(*) DESC LIMIT 1"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "Please show the name of the conductor that has conducted orchestras founded after 2008.",
+        "query": "SELECT T1.Name FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID WHERE Year_of_Founded  >  2008"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the names of conductors who have conducted orchestras founded after the year 2008?",
+        "query": "SELECT T1.Name FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID WHERE Year_of_Founded  >  2008"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "Please show the different record companies and the corresponding number of orchestras.",
+        "query": "SELECT Record_Company ,  COUNT(*) FROM orchestra GROUP BY Record_Company"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "How many orchestras does each record company manage?",
+        "query": "SELECT Record_Company ,  COUNT(*) FROM orchestra GROUP BY Record_Company"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "Please show the record formats of orchestras in ascending order of count.",
+        "query": "SELECT Major_Record_Format FROM orchestra GROUP BY Major_Record_Format ORDER BY COUNT(*) ASC"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the major record formats of orchestras, sorted by their frequency?",
+        "query": "SELECT Major_Record_Format FROM orchestra GROUP BY Major_Record_Format ORDER BY COUNT(*) ASC"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "List the record company shared by the most number of orchestras.",
+        "query": "SELECT Record_Company FROM orchestra GROUP BY Record_Company ORDER BY COUNT(*) DESC LIMIT 1"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What is the record company used by the greatest number of orchestras?",
+        "query": "SELECT Record_Company FROM orchestra GROUP BY Record_Company ORDER BY COUNT(*) DESC LIMIT 1"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "List the names of orchestras that have no performance.",
+        "query": "SELECT Orchestra FROM orchestra WHERE Orchestra_ID NOT IN (SELECT Orchestra_ID FROM performance)"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the orchestras that do not have any performances?",
+        "query": "SELECT Orchestra FROM orchestra WHERE Orchestra_ID NOT IN (SELECT Orchestra_ID FROM performance)"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "Show the record companies shared by orchestras founded before 2003 and after 2003.",
+        "query": "SELECT Record_Company FROM orchestra WHERE Year_of_Founded  <  2003 INTERSECT SELECT Record_Company FROM orchestra WHERE Year_of_Founded  >  2003"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the record companies that are used by both orchestras founded before 2003 and those founded after 2003?",
+        "query": "SELECT Record_Company FROM orchestra WHERE Year_of_Founded  <  2003 INTERSECT SELECT Record_Company FROM orchestra WHERE Year_of_Founded  >  2003"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "Find the number of orchestras whose record format is \"CD\" or \"DVD\".",
+        "query": "SELECT COUNT(*) FROM orchestra WHERE Major_Record_Format  =  \"CD\" OR Major_Record_Format  =  \"DVD\""
+    },
+    {
+        "db_id": "orchestra",
+        "question": "Count the number of orchestras that have CD or DVD as their record format.",
+        "query": "SELECT COUNT(*) FROM orchestra WHERE Major_Record_Format  =  \"CD\" OR Major_Record_Format  =  \"DVD\""
+    },
+    {
+        "db_id": "orchestra",
+        "question": "Show the years in which orchestras that have given more than one performance are founded.",
+        "query": "SELECT Year_of_Founded FROM orchestra AS T1 JOIN performance AS T2 ON T1.Orchestra_ID  =  T2.Orchestra_ID GROUP BY T2.Orchestra_ID HAVING COUNT(*)  >  1"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are years of founding for orchestras that have had more than a single performance?",
+        "query": "SELECT Year_of_Founded FROM orchestra AS T1 JOIN performance AS T2 ON T1.Orchestra_ID  =  T2.Orchestra_ID GROUP BY T2.Orchestra_ID HAVING COUNT(*)  >  1"
+    }
+]

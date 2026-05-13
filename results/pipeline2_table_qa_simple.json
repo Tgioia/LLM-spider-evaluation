@@ -1,0 +1,115 @@
+[
+    {
+        "db_id": "world_1",
+        "question": "What are the names of all the countries that became independent after 1950?",
+        "query": "SELECT Name FROM country WHERE IndepYear  >  1950",
+        "predicted_table_qa_data": "[\n[\"Afghanistan\", \"1978\"],\n[\"Angola\", \"1975\"],\n[\"American Samoa\", null],\n[\"Antarctica\", null],\n[\"French Southern territories\", null],\n[\"Antigua and Barbuda\", \"1981\"],\n[\"Australia\", \"1901\"],\n[\"Austria\", \"1918\"],\n[\"Azerbaijan\", \"1991\"],\n[\"Burundi\", \"1962\"],\n[\"Belgium\", \"1830\"],\n[\"Benin\", \"1960\"],\n[\"Burkina Faso\", \"1960\"],\n[\"Bangladesh\", \"1971\"],\n[\"Bulgaria\", \"1908\"],\n[\"Bahrain\", \"1971\"],\n[\"Bahamas\", \"1973\"],\n[\"Bosnia and Herzegovina\", \"1992\"],\n[\"Belarus\", \"1991\"],\n[\"Belize\", \"1981\"],\n[\"Bermuda\", null],\n[\"Bolivia\", \"1825\"]\n]",
+        "oracle_tables_used": [
+            "country"
+        ]
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the average life expectancy in African countries that are republics?",
+        "query": "SELECT avg(LifeExpectancy) FROM country WHERE Continent  =  \"Africa\" AND GovernmentForm  =  \"Republic\"",
+        "predicted_table_qa_data": "To find the average life expectancy of African countries that are republics, we first identify the African nations listed in the database and check their government form for \"Republic\". Then, we calculate the average of their life expectancy values.\n\nFrom the database:\n\n- **Angola** (Republic) - Life Expectancy: 38.3\n- **Burundi** (Republic) - Life Expectancy: 46.2\n- **Benin** (Republic) - Life Expectancy: 50.2\n- **Burkina Faso** (Republic) - Life Expectancy: 46.7\n- **C\u00f4te d'Ivoire** (not listed in the excerpt, but assumed to be a republic for completeness)\n- **Cameroon** (not listed in the excerpt, but assumed to be a republic for completeness)\n- **Djibouti** (not listed in the excerpt, but assumed to be a republic for completeness)\n- **Eritrea** (not listed in the excerpt, but assumed to be a republic for completeness)\n- **Ethiopia** (Republic) - Life Expectancy: 46.2\n- **Gabon** (Republic) - Life Expectancy: 53.3\n- **Ghana** (Republic) - Life Expectancy: 60.8\n- **Guinea** (Republic) - Life Expectancy: 58.5\n- **Kenya** (Republic) - Life Expectancy: 61.1\n- **Lesotho** (Kingdom, not a republic)\n- **Liberia** (Republic) - Life Expectancy: 60.8\n- **Madagascar** (Republic) - Life Expectancy: 62.3\n- **Malawi** (Republic) - Life Expectancy: 63.5\n- **Mali** (Republic) - Life Expectancy: 50.2\n- **Mauritania** (Republic) - Life Expectancy: 64.9\n- **Morocco** (Monarchy, not a republic)\n- **Niger** (Republic) - Life Expectancy: 60.3\n- **Nigeria** (Federal Republic) - Life Expectancy: 52.0\n- **S\u00e3o Tom\u00e9 and Pr\u00edncipe** (Republic) - Life Expectancy: 64.9\n- **Senegal** (Republic) - Life Expectancy: 62.8\n- **Tanzania** (United Republic) - Life Expectancy: 61.1\n- **Togo** (Republic) - Life Expectancy: 60.2\n- **Uganda** (Republic) - Life Expectancy: 61.5\n- **Zambia** (Republic) - Life Expectancy: 53.4\n- **Zimbabwe** (Republic) - Life Expectancy: 49.3\n\nUsing the provided data:\n\n1. Angola: 38.3\n2. Burundi: 46.2\n3. Benin: 50.2\n4. Burkina Faso: 46.7\n5. Ethiopia: 46.2\n6. Gabon: 53.3\n7. Ghana: 60.8\n8. Guinea: 58.5\n9. Kenya: 61.1\n10. Liberia: 60.8\n11. Madagascar: 62.3\n12. Malawi: 63.5\n13. Mali: 50.2\n14. Mauritania: 64.9\n15. Niger: 60.3\n16. Nigeria: 52.0\n17. S\u00e3o Tom\u00e9 and Pr\u00edncipe: 64.9\n18. Senegal: 62.8\n19. Tanzania: 61.1\n20. Togo: 60.2\n21. Uganda: 61.5\n22. Zambia: 53.4\n23. Zimbabwe: 49.3\n\nSum of life expectancies = 38.3 + 46.2 + 50.2 + 46.7 + 46.2 + 53.3 + 60.8 + 58.5 + 61.1 + 60.8 + 62.3 + 63.5 + 50.2 + 64.9 + 60.3 + 52.0 + 64.9 + 62.8 + 61.1 + 60.2 + 61.5 + 53.4 + 49.3 = 1065.7\n\nNumber of countries = 23\n\nAverage life expectancy = Total Life Expectancy / Number of Countries = 1065.7 / 23 \u2248 46.31\n\nThus, the average life expectancy in African republics is approximately **46.31 years**.\n\nThe answer in list of lists format:\n\n[[\"Average Life Expectancy\", \"46.31\"]]",
+        "oracle_tables_used": [
+            "country"
+        ]
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which language is the most popular on the Asian continent?",
+        "query": "SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Continent  =  \"Asia\" GROUP BY T2.Language ORDER BY COUNT (*) DESC LIMIT 1",
+        "predicted_table_qa_data": "To determine the most popular language in Asia, we need to look at the `countrylanguage` table and filter for countries located in Asia based on the `country` table. Then, we can find the language with the highest `Percentage`.\n\nHere's the step-by-step process:\n\n1. **Identify Asian Countries**: From the `country` table, select rows where `Continent` is 'Asia'.\n2. **List Languages for These Countries**: For each identified country, list its languages from the `countrylanguage` table.\n3. **Calculate Popularity**: Determine which language has the highest `Percentage` across all these countries.\n\n**Asian Countries in the Database**:\n- Afghanistan (AF)\n- Bangladesh (BGD)\n- Bahrain (BHR)\n- Azerbaijan (AZE)\n- Belarus (BLR) - Note: Belarus spans Europe and Asia, but for simplicity, we'll consider its Asian regions.\n- Bulgaria (BG) - Note: Bulgaria is primarily European.\n- China (CN) - Not listed in the provided data.\n- India (IND) - Not listed in the provided data.\n- Indonesia (IDN) - Not listed in the provided data.\n- Japan (JPN) - Not listed in the provided data.\n- Kazakhstan (KAZ) - Not listed in the provided data.\n- Kyrgyzstan (KGZ) - Not listed in the provided data.\n- Lebanon (LBN) - Not listed in the provided data.\n- Malaysia (MYS) - Not listed in the provided data.\n- Mongolia (MNG) - Not listed in the provided data.\n- Nepal (NPL) - Not listed in the provided data.\n- Pakistan (PAK) - Not listed in the provided data.\n- Philippines (PHL) - Not listed in the provided data.\n- Saudi Arabia (SAU) - Not listed in the provided data.\n- Singapore (SGP) - Not listed in the provided data.\n- South Korea (KOR) - Not listed in the provided data.\n- Sri Lanka (LKA) - Not listed in the provided data.\n- Taiwan (TWN) - Not listed in the provided data.\n- Thailand (THA) - Not listed in the provided data.\n- Turkey (TUR) - Not listed in the provided data.\n- Turkmenistan (TKM) - Not listed in the provided data.\n- Uzbekistan (UZB) - Not listed in the provided data.\n- Vietnam (VNM) - Not listed in the provided data.\n\n**Languages for Asian Countries Present in the Database**:\n- **Afghanistan**: Dari (32.1%), Pashto (52.4%)\n- **Bangladesh**: Bengali (not listed, but assumed dominant), English, Hindi, Urdu, etc.\n- **Bahrain**: Arabic (42.0%)\n- **Azerbaijan**: Azerbaijani (not listed, but assumed official), Russian, Turkish\n- **Armenia**: Armenian (not listed, but assumed official), Russian\n- **India**: Hindi, Bengali, Telugu, Tamil, Urdu, etc.\n- **Pakistan**: Urdu (official), English, Punjabi, Sindhi, Pashto, Balochi, etc.\n\nGiven the data:\n- In Afghanistan, **Pashto** is the most popular language with 52.4%.\n- In Bangladesh, Bengali would be dominant but not listed.\n- In Bahrain, Arabic is official and widely used.\n- In Azerbaijan, Azerbaijani (not listed) would be primary.\n- In Armenia, Armenian (not listed) would be primary.\n\nConsidering the provided data, **Pashto in Afghanistan** stands out as the most popular language with a clear percentage of 52.4%. Therefore, Pashto is the most popular language on the Asian continent based on the available dataset.\n\n**Result**:\n```plaintext\nPashto\n```\n\nHowever, since the request format specifies a list of lists, we will present it accordingly:\n\n**Answer in List of Lists Format**:\n```python\n[['Pashto'], 52.4]\n```",
+        "oracle_tables_used": [
+            "country",
+            "countrylanguage"
+        ]
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which language is the most popular in Aruba?",
+        "query": "SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Name  =  \"Aruba\" ORDER BY Percentage DESC LIMIT 1",
+        "predicted_table_qa_data": "[[\"Papiamento\", 76.7]]",
+        "oracle_tables_used": [
+            "country",
+            "countrylanguage"
+        ]
+    },
+    {
+        "db_id": "world_1",
+        "question": "Find the government form name and total population for each government form whose average life expectancy is longer than 72.",
+        "query": "SELECT sum(Population) ,  GovernmentForm FROM country GROUP BY GovernmentForm HAVING avg(LifeExpectancy)  >  72",
+        "predicted_table_qa_data": "[[\"GovernmentForm\", \"Population\"], [\"Constitutional Monarchy, Federation\", 18886000], [\"Monarchy (Emirate)\", 617000], [\"Parliamentary Coprincipality\", 78000]]",
+        "oracle_tables_used": [
+            "country"
+        ]
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which countries have greater area than that of any country in Europe?",
+        "query": "SELECT Name FROM country WHERE SurfaceArea  >  (SELECT min(SurfaceArea) FROM country WHERE Continent  =  \"Europe\")",
+        "predicted_table_qa_data": "To determine which countries have a greater surface area than any country in Europe, we first need to identify the largest European country by surface area from the provided database.\n\nFrom the `country` table, we can extract the surface areas for European countries:\n\n- Austria: 83859.0\n- Belarus: 207600.0\n- Belgium: 30518.0\n- Bulgaria: 110994.0\n- Croatia (not listed, but included in Southern Europe under former Yugoslavia): ~56,594 (approx.)\n- Cyprus: not listed\n- Czech Republic: not listed\n- Denmark: not listed\n- Estonia: not listed\n- Finland: not listed\n- France: not listed\n- Germany: not listed\n- Greece: not listed\n- Hungary: not listed\n- Iceland: not listed\n- Ireland: not listed\n- Italy: not listed\n- Latvia: not listed\n- Lithuania: not listed\n- Luxembourg: not listed\n- Malta: not listed\n- Moldova: not listed\n- Netherlands: not listed\n- North Macedonia: not listed\n- Poland: not listed\n- Portugal: not listed\n- Romania: not listed\n- Russia (partially in Europe): ~38,459,000 (but only European part is ~16,100,000)\n- Serbia: not listed\n- Slovakia: not listed\n- Slovenia: not listed\n- Spain: not listed\n- Sweden: not listed\n- Switzerland: not listed\n- Ukraine (partially in Europe): ~603,550 (European part)\n\nThe largest European country by surface area from the list is **Belarus** with 207600.0.\n\nNow, we compare this value against all countries' surface areas in the database to find those greater than 207600.0:\n\n1. Angola: 1246700.0\n2. Argentina: 2780400.0\n3. Azerbaijan: 86600.0 (less, exclude)\n4. Bangladesh: 143998.0 (less, exclude)\n5. Bolivia: 1098581.0\n6. Brazil (not listed, but known to be ~8515760)\n7. Canada (not listed, but known to be ~9970610)\n8. China (not listed, but known to be ~9388211)\n9. Colombia (not listed, but known to be ~1141745)\n10. Congo: 238000.0 (less, exclude)\n11. Democratic Republic of the Congo: 2340400.0\n12. Egypt: 1001440.0\n13. Ethiopia: 1130000.0\n14. France (not listed, but known to be ~543965)\n15. India: not listed (but known to be ~3287263)\n16. Indonesia: not listed (but known to be ~1811570)\n17. Iran: not listed (but known to be ~163695+)\n18. Iraq: not listed (but known to be ~43772+)\n19. Kenya: not listed (but known to be ~586600)\n20. Mexico: not listed (but known to be ~1962500)\n21. Myanmar: not listed (but known to be ~676578)\n22. Nigeria: not listed (but known to be ~923770)\n23. Pakistan: not listed (but known to be ~880940)\n24. Peru: not listed (but known to be ~128521\n25. Saudi Arabia: not listed (but known to be ~195000)\n26. South Africa: not listed (but known to be ~1224470)\n27. Sudan: not listed (but known to be ~1861484)\n28. Thailand: not listed (but known to be ~513115)\n29. Turkey: not listed (but known to be ~783562)\n30. United States: not listed (but known to be ~9629090)\n31. Venezuela: not listed (but known to be ~287950)\n\nFrom the above list, the countries with surface areas greater than 207600.0 are:\n\n- Angola\n- Argentina\n- Bolivia\n- Democratic Republic of the Congo\n- Egypt\n- Ethiopia\n- India (known value)\n- Kenya (known value)\n- Mexico\n- Nigeria\n- Pakistan\n- Peru (known value)\n- South Africa\n- Sudan\n- Thailand (known value)\n- Turkey (known value)\n- United States\n- Venezuela\n\nThus, the final list of countries with greater area than any European country is:\n\n```plaintext\n[\n  [\"Angola\", 1246700.0],\n  [\"Argentina\", 2780400.0],\n  [\"Bolivia\", 1098581.0],\n  [\"Democratic Republic of the Congo\", 2340400.0],\n  [\"Egypt\", 1001440.0],\n  [\"Ethiopia\", 1130000.0],\n  [\"India\", ~3287263.0],\n  [\"Kenya\", ~586600.0],\n  [\"Mexico\", ~1962500.0],\n  [\"Nigeria\", ~923770.0],\n  [\"Pakistan\", ~880940.0],\n  [\"Peru\", ~1285210.0],\n  [\"South Africa\", ~1224470.0],\n  [\"Sudan\", ~1861484.0],\n  [\"Thailand\", ~513115.0],\n  [\"Turkey\", ~783562.0],\n  [\"United States\", ~9629090.0],\n  [\"Venezuela\", ~287950.0]\n]\n```",
+        "oracle_tables_used": [
+            "country"
+        ]
+    },
+    {
+        "db_id": "orchestra",
+        "question": "How many conductors are there?",
+        "query": "SELECT count(*) FROM conductor",
+        "predicted_table_qa_data": "[['Number of Conductors', 12]]",
+        "oracle_tables_used": [
+            "conductor"
+        ]
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the names of conductors whose nationalities are not \"USA\"?",
+        "query": "SELECT Name FROM conductor WHERE Nationality != 'USA'",
+        "predicted_table_qa_data": "[[\"Igor Stravinsky\", 41, \"UK\"], [\"Colin Davis\", 42, \"USA\"], [\"Paul Jorgensen\", 43, \"UK\"], [\"Charles Dutoit\", 43, \"France\"], [\"Pierre Boulez\", 49, \"UK\"], [\"Valeri Gergiev\", 47, \"USA\"], [\"Robert Craft\", 63, \"UK\"], [\"Michael Tilson Thomas\", 42, \"France\"]]",
+        "oracle_tables_used": [
+            "conductor"
+        ]
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the maximum and minimum share of performances whose type is not \"Live final\".",
+        "query": "SELECT max(SHARE) ,  min(SHARE) FROM performance WHERE TYPE != \"Live final\"",
+        "predicted_table_qa_data": "[[\"Maximum Share\", 40.9], [\"Minimum Share\", 22.7]]",
+        "oracle_tables_used": [
+            "performance"
+        ]
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the names of conductors as well as the corresonding orchestras that they have conducted?",
+        "query": "SELECT T1.Name ,  T2.Orchestra FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID",
+        "predicted_table_qa_data": "[\n[\"Antal Dor\u00e1ti\", \"London Symphony Orchestra\"],\n[\"Igor Stravinsky\", \"Columbia Symphony Orchestra\"],\n[\"Colin Davis\", \"Royal Concertgebouw Orchestra\"],\n[\"Paul Jorgensen\", \"Royal Danish Orchestra\"],\n[\"Antal Brown\", \"Detroit Symphony Orchestra\"],\n[\"Charles Dutoit\", \"Montreal Symphony Orchestra\"],\n[\"Gerard Schwarz\", \"Seattle Symphony Orchestra\"],\n[\"Pierre Boulez\", \"Chicago Symphony Orchestra\"],\n[\"Valeri Gergiev\", \"Kirov Orchestra\"],\n[\"Robert Craft\", \"Philharmonia Orchestra\"],\n[\"Seiji Ozawa\", \"Orchestre de Paris\"],\n[\"Michael Tilson Thomas\", \"San Francisco Symphony Orchestra\"]\n]",
+        "oracle_tables_used": [
+            "conductor",
+            "orchestra"
+        ]
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What is the name of the conductor who has conducted the most orchestras?",
+        "query": "SELECT T1.Name FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID GROUP BY T2.Conductor_ID ORDER BY COUNT(*) DESC LIMIT 1",
+        "predicted_table_qa_data": "[[\"Seiji Ozawa\", 11]]",
+        "oracle_tables_used": [
+            "conductor",
+            "orchestra"
+        ]
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the orchestras that do not have any performances?",
+        "query": "SELECT Orchestra FROM orchestra WHERE Orchestra_ID NOT IN (SELECT Orchestra_ID FROM performance)",
+        "predicted_table_qa_data": "[[\"Detroit Symphony Orchestra\", 5], [\"Montreal Symphony Orchestra\", 6], [\"Seattle Symphony Orchestra\", 7], [\"Philharmonia Orchestra\", 10]]",
+        "oracle_tables_used": [
+            "orchestra",
+            "performance"
+        ]
+    }
+]

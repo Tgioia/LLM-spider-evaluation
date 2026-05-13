@@ -1,0 +1,62 @@
+[
+    {
+        "db_id": "world_1",
+        "question": "What are the names of all the countries that became independent after 1950?",
+        "query": "SELECT Name FROM country WHERE IndepYear  >  1950"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the average life expectancy in African countries that are republics?",
+        "query": "SELECT avg(LifeExpectancy) FROM country WHERE Continent  =  \"Africa\" AND GovernmentForm  =  \"Republic\""
+    },
+        {
+        "db_id": "world_1",
+        "question": "Which language is the most popular on the Asian continent?",
+        "query": "SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Continent  =  \"Asia\" GROUP BY T2.Language ORDER BY COUNT (*) DESC LIMIT 1"
+    },
+        {
+        "db_id": "world_1",
+        "question": "Which language is the most popular in Aruba?",
+        "query": "SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Name  =  \"Aruba\" ORDER BY Percentage DESC LIMIT 1"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Find the government form name and total population for each government form whose average life expectancy is longer than 72.",
+        "query": "SELECT sum(Population) ,  GovernmentForm FROM country GROUP BY GovernmentForm HAVING avg(LifeExpectancy)  >  72"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which countries have greater area than that of any country in Europe?",
+        "query": "SELECT Name FROM country WHERE SurfaceArea  >  (SELECT min(SurfaceArea) FROM country WHERE Continent  =  \"Europe\")"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "How many conductors are there?",
+        "query": "SELECT count(*) FROM conductor"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the names of conductors whose nationalities are not \"USA\"?",
+        "query": "SELECT Name FROM conductor WHERE Nationality != 'USA'"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the maximum and minimum share of performances whose type is not \"Live final\".",
+        "query": "SELECT max(SHARE) ,  min(SHARE) FROM performance WHERE TYPE != \"Live final\""
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the names of conductors as well as the corresonding orchestras that they have conducted?",
+        "query": "SELECT T1.Name ,  T2.Orchestra FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What is the name of the conductor who has conducted the most orchestras?",
+        "query": "SELECT T1.Name FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID GROUP BY T2.Conductor_ID ORDER BY COUNT(*) DESC LIMIT 1"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the orchestras that do not have any performances?",
+        "query": "SELECT Orchestra FROM orchestra WHERE Orchestra_ID NOT IN (SELECT Orchestra_ID FROM performance)"
+    }
+]

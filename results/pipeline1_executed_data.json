@@ -1,0 +1,2465 @@
+[
+    {
+        "db_id": "world_1",
+        "question": "What are the names of all the countries that became independent after 1950?",
+        "query": "SELECT Name FROM country WHERE IndepYear  >  1950",
+        "predicted_query": "SELECT Name\nFROM country\nWHERE IndepYear > 1950;",
+        "ground_truth_data": [
+            [
+                "algeria"
+            ],
+            [
+                "angola"
+            ],
+            [
+                "antigua and barbuda"
+            ],
+            [
+                "armenia"
+            ],
+            [
+                "azerbaijan"
+            ],
+            [
+                "bahamas"
+            ],
+            [
+                "bahrain"
+            ],
+            [
+                "bangladesh"
+            ],
+            [
+                "barbados"
+            ],
+            [
+                "belarus"
+            ],
+            [
+                "belize"
+            ],
+            [
+                "benin"
+            ],
+            [
+                "bosnia and herzegovina"
+            ],
+            [
+                "botswana"
+            ],
+            [
+                "brunei"
+            ],
+            [
+                "burkina faso"
+            ],
+            [
+                "burundi"
+            ],
+            [
+                "cambodia"
+            ],
+            [
+                "cameroon"
+            ],
+            [
+                "cape verde"
+            ],
+            [
+                "central african republic"
+            ],
+            [
+                "chad"
+            ],
+            [
+                "comoros"
+            ],
+            [
+                "congo"
+            ],
+            [
+                "congo, the democratic republic of the"
+            ],
+            [
+                "croatia"
+            ],
+            [
+                "cyprus"
+            ],
+            [
+                "czech republic"
+            ],
+            [
+                "c\u00f4te d\u2019ivoire"
+            ],
+            [
+                "djibouti"
+            ],
+            [
+                "dominica"
+            ],
+            [
+                "equatorial guinea"
+            ],
+            [
+                "eritrea"
+            ],
+            [
+                "estonia"
+            ],
+            [
+                "fiji islands"
+            ],
+            [
+                "gabon"
+            ],
+            [
+                "gambia"
+            ],
+            [
+                "georgia"
+            ],
+            [
+                "germany"
+            ],
+            [
+                "ghana"
+            ],
+            [
+                "grenada"
+            ],
+            [
+                "guinea"
+            ],
+            [
+                "guinea-bissau"
+            ],
+            [
+                "guyana"
+            ],
+            [
+                "jamaica"
+            ],
+            [
+                "kazakstan"
+            ],
+            [
+                "kenya"
+            ],
+            [
+                "kiribati"
+            ],
+            [
+                "kuwait"
+            ],
+            [
+                "kyrgyzstan"
+            ],
+            [
+                "laos"
+            ],
+            [
+                "latvia"
+            ],
+            [
+                "lesotho"
+            ],
+            [
+                "libyan arab jamahiriya"
+            ],
+            [
+                "lithuania"
+            ],
+            [
+                "macedonia"
+            ],
+            [
+                "madagascar"
+            ],
+            [
+                "malawi"
+            ],
+            [
+                "malaysia"
+            ],
+            [
+                "maldives"
+            ],
+            [
+                "mali"
+            ],
+            [
+                "malta"
+            ],
+            [
+                "marshall islands"
+            ],
+            [
+                "mauritania"
+            ],
+            [
+                "mauritius"
+            ],
+            [
+                "micronesia, federated states of"
+            ],
+            [
+                "moldova"
+            ],
+            [
+                "morocco"
+            ],
+            [
+                "mozambique"
+            ],
+            [
+                "namibia"
+            ],
+            [
+                "nauru"
+            ],
+            [
+                "niger"
+            ],
+            [
+                "nigeria"
+            ],
+            [
+                "oman"
+            ],
+            [
+                "palau"
+            ],
+            [
+                "papua new guinea"
+            ],
+            [
+                "qatar"
+            ],
+            [
+                "russian federation"
+            ],
+            [
+                "rwanda"
+            ],
+            [
+                "saint kitts and nevis"
+            ],
+            [
+                "saint lucia"
+            ],
+            [
+                "saint vincent and the grenadines"
+            ],
+            [
+                "samoa"
+            ],
+            [
+                "sao tome and principe"
+            ],
+            [
+                "senegal"
+            ],
+            [
+                "seychelles"
+            ],
+            [
+                "sierra leone"
+            ],
+            [
+                "singapore"
+            ],
+            [
+                "slovakia"
+            ],
+            [
+                "slovenia"
+            ],
+            [
+                "solomon islands"
+            ],
+            [
+                "somalia"
+            ],
+            [
+                "sudan"
+            ],
+            [
+                "suriname"
+            ],
+            [
+                "swaziland"
+            ],
+            [
+                "tajikistan"
+            ],
+            [
+                "tanzania"
+            ],
+            [
+                "togo"
+            ],
+            [
+                "tonga"
+            ],
+            [
+                "trinidad and tobago"
+            ],
+            [
+                "tunisia"
+            ],
+            [
+                "turkmenistan"
+            ],
+            [
+                "tuvalu"
+            ],
+            [
+                "uganda"
+            ],
+            [
+                "ukraine"
+            ],
+            [
+                "united arab emirates"
+            ],
+            [
+                "uzbekistan"
+            ],
+            [
+                "vanuatu"
+            ],
+            [
+                "zambia"
+            ],
+            [
+                "zimbabwe"
+            ]
+        ],
+        "predicted_data": [
+            [
+                "algeria"
+            ],
+            [
+                "angola"
+            ],
+            [
+                "antigua and barbuda"
+            ],
+            [
+                "armenia"
+            ],
+            [
+                "azerbaijan"
+            ],
+            [
+                "bahamas"
+            ],
+            [
+                "bahrain"
+            ],
+            [
+                "bangladesh"
+            ],
+            [
+                "barbados"
+            ],
+            [
+                "belarus"
+            ],
+            [
+                "belize"
+            ],
+            [
+                "benin"
+            ],
+            [
+                "bosnia and herzegovina"
+            ],
+            [
+                "botswana"
+            ],
+            [
+                "brunei"
+            ],
+            [
+                "burkina faso"
+            ],
+            [
+                "burundi"
+            ],
+            [
+                "cambodia"
+            ],
+            [
+                "cameroon"
+            ],
+            [
+                "cape verde"
+            ],
+            [
+                "central african republic"
+            ],
+            [
+                "chad"
+            ],
+            [
+                "comoros"
+            ],
+            [
+                "congo"
+            ],
+            [
+                "congo, the democratic republic of the"
+            ],
+            [
+                "croatia"
+            ],
+            [
+                "cyprus"
+            ],
+            [
+                "czech republic"
+            ],
+            [
+                "c\u00f4te d\u2019ivoire"
+            ],
+            [
+                "djibouti"
+            ],
+            [
+                "dominica"
+            ],
+            [
+                "equatorial guinea"
+            ],
+            [
+                "eritrea"
+            ],
+            [
+                "estonia"
+            ],
+            [
+                "fiji islands"
+            ],
+            [
+                "gabon"
+            ],
+            [
+                "gambia"
+            ],
+            [
+                "georgia"
+            ],
+            [
+                "germany"
+            ],
+            [
+                "ghana"
+            ],
+            [
+                "grenada"
+            ],
+            [
+                "guinea"
+            ],
+            [
+                "guinea-bissau"
+            ],
+            [
+                "guyana"
+            ],
+            [
+                "jamaica"
+            ],
+            [
+                "kazakstan"
+            ],
+            [
+                "kenya"
+            ],
+            [
+                "kiribati"
+            ],
+            [
+                "kuwait"
+            ],
+            [
+                "kyrgyzstan"
+            ],
+            [
+                "laos"
+            ],
+            [
+                "latvia"
+            ],
+            [
+                "lesotho"
+            ],
+            [
+                "libyan arab jamahiriya"
+            ],
+            [
+                "lithuania"
+            ],
+            [
+                "macedonia"
+            ],
+            [
+                "madagascar"
+            ],
+            [
+                "malawi"
+            ],
+            [
+                "malaysia"
+            ],
+            [
+                "maldives"
+            ],
+            [
+                "mali"
+            ],
+            [
+                "malta"
+            ],
+            [
+                "marshall islands"
+            ],
+            [
+                "mauritania"
+            ],
+            [
+                "mauritius"
+            ],
+            [
+                "micronesia, federated states of"
+            ],
+            [
+                "moldova"
+            ],
+            [
+                "morocco"
+            ],
+            [
+                "mozambique"
+            ],
+            [
+                "namibia"
+            ],
+            [
+                "nauru"
+            ],
+            [
+                "niger"
+            ],
+            [
+                "nigeria"
+            ],
+            [
+                "oman"
+            ],
+            [
+                "palau"
+            ],
+            [
+                "papua new guinea"
+            ],
+            [
+                "qatar"
+            ],
+            [
+                "russian federation"
+            ],
+            [
+                "rwanda"
+            ],
+            [
+                "saint kitts and nevis"
+            ],
+            [
+                "saint lucia"
+            ],
+            [
+                "saint vincent and the grenadines"
+            ],
+            [
+                "samoa"
+            ],
+            [
+                "sao tome and principe"
+            ],
+            [
+                "senegal"
+            ],
+            [
+                "seychelles"
+            ],
+            [
+                "sierra leone"
+            ],
+            [
+                "singapore"
+            ],
+            [
+                "slovakia"
+            ],
+            [
+                "slovenia"
+            ],
+            [
+                "solomon islands"
+            ],
+            [
+                "somalia"
+            ],
+            [
+                "sudan"
+            ],
+            [
+                "suriname"
+            ],
+            [
+                "swaziland"
+            ],
+            [
+                "tajikistan"
+            ],
+            [
+                "tanzania"
+            ],
+            [
+                "togo"
+            ],
+            [
+                "tonga"
+            ],
+            [
+                "trinidad and tobago"
+            ],
+            [
+                "tunisia"
+            ],
+            [
+                "turkmenistan"
+            ],
+            [
+                "tuvalu"
+            ],
+            [
+                "uganda"
+            ],
+            [
+                "ukraine"
+            ],
+            [
+                "united arab emirates"
+            ],
+            [
+                "uzbekistan"
+            ],
+            [
+                "vanuatu"
+            ],
+            [
+                "zambia"
+            ],
+            [
+                "zimbabwe"
+            ]
+        ],
+        "execution_status": "Success"
+    },
+    {
+        "db_id": "world_1",
+        "question": "What is the average life expectancy in African countries that are republics?",
+        "query": "SELECT avg(LifeExpectancy) FROM country WHERE Continent  =  \"Africa\" AND GovernmentForm  =  \"Republic\"",
+        "predicted_query": "SELECT AVG(LifeExpectancy) \nFROM country \nWHERE Continent = 'Africa' \n  AND GovernmentForm = 'Republic';",
+        "ground_truth_data": [
+            [
+                "50.84347826086957"
+            ]
+        ],
+        "predicted_data": [
+            [
+                "50.84347826086957"
+            ]
+        ],
+        "execution_status": "Success"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which language is the most popular on the Asian continent?",
+        "query": "SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Continent  =  \"Asia\" GROUP BY T2.Language ORDER BY COUNT (*) DESC LIMIT 1",
+        "predicted_query": "SELECT Language\nFROM   countrylanguage cl\nJOIN   country c ON cl.CountryCode = c.Code\nWHERE  c.Continent = 'Asia'\nORDER BY Percentage DESC\nLIMIT 1;",
+        "ground_truth_data": [
+            [
+                "arabic"
+            ]
+        ],
+        "predicted_data": [
+            [
+                "dhivehi"
+            ]
+        ],
+        "execution_status": "Success"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which language is the most popular in Aruba?",
+        "query": "SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Name  =  \"Aruba\" ORDER BY Percentage DESC LIMIT 1",
+        "predicted_query": "SELECT Language\nFROM countrylanguage\nWHERE CountryCode = (SELECT Code FROM country WHERE Name = 'Aruba')\nORDER BY Percentage DESC\nLIMIT 1;",
+        "ground_truth_data": [
+            [
+                "papiamento"
+            ]
+        ],
+        "predicted_data": [
+            [
+                "papiamento"
+            ]
+        ],
+        "execution_status": "Success"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Find the government form name and total population for each government form whose average life expectancy is longer than 72.",
+        "query": "SELECT sum(Population) ,  GovernmentForm FROM country GROUP BY GovernmentForm HAVING avg(LifeExpectancy)  >  72",
+        "predicted_query": "```sql\nSELECT GovernmentForm, SUM(Population) AS TotalPopulation\nFROM country\nGROUP BY GovernmentForm\nHAVING AVG(LifeExpectancy) > 72;\n```",
+        "ground_truth_data": [
+            [
+                "115072000",
+                "socialistic republic"
+            ],
+            [
+                "1731000",
+                "overseas department of france"
+            ],
+            [
+                "193050",
+                "dependent territory of the uk"
+            ],
+            [
+                "1972000",
+                "constitutional monarchy (emirate)"
+            ],
+            [
+                "2441000",
+                "emirate federation"
+            ],
+            [
+                "2870000",
+                "monarchy (sultanate)"
+            ],
+            [
+                "320000",
+                "nonmetropolitan territory of the netherlands"
+            ],
+            [
+                "329000",
+                "us territory"
+            ],
+            [
+                "3947000",
+                "commonwealth of the us"
+            ],
+            [
+                "464000",
+                "nonmetropolitan territory of france"
+            ],
+            [
+                "5605000",
+                "socialistic state"
+            ],
+            [
+                "617000",
+                "monarchy (emirate)"
+            ],
+            [
+                "7160400",
+                "federation"
+            ],
+            [
+                "7255000",
+                "special administrative region of china"
+            ],
+            [
+                "78000",
+                "parliamentary coprincipality"
+            ],
+            [
+                "82516000",
+                "constitutional monarchy, federation"
+            ],
+            [
+                "99000",
+                "part of denmark"
+            ]
+        ],
+        "predicted_data": [],
+        "execution_status": "SQL Error: near \"```sql\nSELECT GovernmentForm, SUM(Population) AS TotalPopulation\nFROM country\nGROUP BY GovernmentForm\nHAVING AVG(LifeExpectancy) > 72;\n```\": syntax error"
+    },
+    {
+        "db_id": "world_1",
+        "question": "Which countries have greater area than that of any country in Europe?",
+        "query": "SELECT Name FROM country WHERE SurfaceArea  >  (SELECT min(SurfaceArea) FROM country WHERE Continent  =  \"Europe\")",
+        "predicted_query": "SELECT Name\nFROM   country\nWHERE  SurfaceArea > (\n         SELECT MIN(SurfaceArea)\n         FROM   country\n         WHERE  Continent = 'Europe'\n       );",
+        "ground_truth_data": [
+            [
+                "afghanistan"
+            ],
+            [
+                "albania"
+            ],
+            [
+                "algeria"
+            ],
+            [
+                "american samoa"
+            ],
+            [
+                "andorra"
+            ],
+            [
+                "angola"
+            ],
+            [
+                "anguilla"
+            ],
+            [
+                "antarctica"
+            ],
+            [
+                "antigua and barbuda"
+            ],
+            [
+                "argentina"
+            ],
+            [
+                "armenia"
+            ],
+            [
+                "aruba"
+            ],
+            [
+                "australia"
+            ],
+            [
+                "austria"
+            ],
+            [
+                "azerbaijan"
+            ],
+            [
+                "bahamas"
+            ],
+            [
+                "bahrain"
+            ],
+            [
+                "bangladesh"
+            ],
+            [
+                "barbados"
+            ],
+            [
+                "belarus"
+            ],
+            [
+                "belgium"
+            ],
+            [
+                "belize"
+            ],
+            [
+                "benin"
+            ],
+            [
+                "bermuda"
+            ],
+            [
+                "bhutan"
+            ],
+            [
+                "bolivia"
+            ],
+            [
+                "bosnia and herzegovina"
+            ],
+            [
+                "botswana"
+            ],
+            [
+                "bouvet island"
+            ],
+            [
+                "brazil"
+            ],
+            [
+                "british indian ocean territory"
+            ],
+            [
+                "brunei"
+            ],
+            [
+                "bulgaria"
+            ],
+            [
+                "burkina faso"
+            ],
+            [
+                "burundi"
+            ],
+            [
+                "cambodia"
+            ],
+            [
+                "cameroon"
+            ],
+            [
+                "canada"
+            ],
+            [
+                "cape verde"
+            ],
+            [
+                "cayman islands"
+            ],
+            [
+                "central african republic"
+            ],
+            [
+                "chad"
+            ],
+            [
+                "chile"
+            ],
+            [
+                "china"
+            ],
+            [
+                "christmas island"
+            ],
+            [
+                "cocos (keeling) islands"
+            ],
+            [
+                "colombia"
+            ],
+            [
+                "comoros"
+            ],
+            [
+                "congo"
+            ],
+            [
+                "congo, the democratic republic of the"
+            ],
+            [
+                "cook islands"
+            ],
+            [
+                "costa rica"
+            ],
+            [
+                "croatia"
+            ],
+            [
+                "cuba"
+            ],
+            [
+                "cyprus"
+            ],
+            [
+                "czech republic"
+            ],
+            [
+                "c\u00f4te d\u2019ivoire"
+            ],
+            [
+                "denmark"
+            ],
+            [
+                "djibouti"
+            ],
+            [
+                "dominica"
+            ],
+            [
+                "dominican republic"
+            ],
+            [
+                "east timor"
+            ],
+            [
+                "ecuador"
+            ],
+            [
+                "egypt"
+            ],
+            [
+                "el salvador"
+            ],
+            [
+                "equatorial guinea"
+            ],
+            [
+                "eritrea"
+            ],
+            [
+                "estonia"
+            ],
+            [
+                "ethiopia"
+            ],
+            [
+                "falkland islands"
+            ],
+            [
+                "faroe islands"
+            ],
+            [
+                "fiji islands"
+            ],
+            [
+                "finland"
+            ],
+            [
+                "france"
+            ],
+            [
+                "french guiana"
+            ],
+            [
+                "french polynesia"
+            ],
+            [
+                "french southern territories"
+            ],
+            [
+                "gabon"
+            ],
+            [
+                "gambia"
+            ],
+            [
+                "georgia"
+            ],
+            [
+                "germany"
+            ],
+            [
+                "ghana"
+            ],
+            [
+                "gibraltar"
+            ],
+            [
+                "greece"
+            ],
+            [
+                "greenland"
+            ],
+            [
+                "grenada"
+            ],
+            [
+                "guadeloupe"
+            ],
+            [
+                "guam"
+            ],
+            [
+                "guatemala"
+            ],
+            [
+                "guinea"
+            ],
+            [
+                "guinea-bissau"
+            ],
+            [
+                "guyana"
+            ],
+            [
+                "haiti"
+            ],
+            [
+                "heard island and mcdonald islands"
+            ],
+            [
+                "honduras"
+            ],
+            [
+                "hong kong"
+            ],
+            [
+                "hungary"
+            ],
+            [
+                "iceland"
+            ],
+            [
+                "india"
+            ],
+            [
+                "indonesia"
+            ],
+            [
+                "iran"
+            ],
+            [
+                "iraq"
+            ],
+            [
+                "ireland"
+            ],
+            [
+                "israel"
+            ],
+            [
+                "italy"
+            ],
+            [
+                "jamaica"
+            ],
+            [
+                "japan"
+            ],
+            [
+                "jordan"
+            ],
+            [
+                "kazakstan"
+            ],
+            [
+                "kenya"
+            ],
+            [
+                "kiribati"
+            ],
+            [
+                "kuwait"
+            ],
+            [
+                "kyrgyzstan"
+            ],
+            [
+                "laos"
+            ],
+            [
+                "latvia"
+            ],
+            [
+                "lebanon"
+            ],
+            [
+                "lesotho"
+            ],
+            [
+                "liberia"
+            ],
+            [
+                "libyan arab jamahiriya"
+            ],
+            [
+                "liechtenstein"
+            ],
+            [
+                "lithuania"
+            ],
+            [
+                "luxembourg"
+            ],
+            [
+                "macao"
+            ],
+            [
+                "macedonia"
+            ],
+            [
+                "madagascar"
+            ],
+            [
+                "malawi"
+            ],
+            [
+                "malaysia"
+            ],
+            [
+                "maldives"
+            ],
+            [
+                "mali"
+            ],
+            [
+                "malta"
+            ],
+            [
+                "marshall islands"
+            ],
+            [
+                "martinique"
+            ],
+            [
+                "mauritania"
+            ],
+            [
+                "mauritius"
+            ],
+            [
+                "mayotte"
+            ],
+            [
+                "mexico"
+            ],
+            [
+                "micronesia, federated states of"
+            ],
+            [
+                "moldova"
+            ],
+            [
+                "monaco"
+            ],
+            [
+                "mongolia"
+            ],
+            [
+                "montserrat"
+            ],
+            [
+                "morocco"
+            ],
+            [
+                "mozambique"
+            ],
+            [
+                "myanmar"
+            ],
+            [
+                "namibia"
+            ],
+            [
+                "nauru"
+            ],
+            [
+                "nepal"
+            ],
+            [
+                "netherlands"
+            ],
+            [
+                "netherlands antilles"
+            ],
+            [
+                "new caledonia"
+            ],
+            [
+                "new zealand"
+            ],
+            [
+                "nicaragua"
+            ],
+            [
+                "niger"
+            ],
+            [
+                "nigeria"
+            ],
+            [
+                "niue"
+            ],
+            [
+                "norfolk island"
+            ],
+            [
+                "north korea"
+            ],
+            [
+                "northern mariana islands"
+            ],
+            [
+                "norway"
+            ],
+            [
+                "oman"
+            ],
+            [
+                "pakistan"
+            ],
+            [
+                "palau"
+            ],
+            [
+                "palestine"
+            ],
+            [
+                "panama"
+            ],
+            [
+                "papua new guinea"
+            ],
+            [
+                "paraguay"
+            ],
+            [
+                "peru"
+            ],
+            [
+                "philippines"
+            ],
+            [
+                "pitcairn"
+            ],
+            [
+                "poland"
+            ],
+            [
+                "portugal"
+            ],
+            [
+                "puerto rico"
+            ],
+            [
+                "qatar"
+            ],
+            [
+                "romania"
+            ],
+            [
+                "russian federation"
+            ],
+            [
+                "rwanda"
+            ],
+            [
+                "r\u00e9union"
+            ],
+            [
+                "saint helena"
+            ],
+            [
+                "saint kitts and nevis"
+            ],
+            [
+                "saint lucia"
+            ],
+            [
+                "saint pierre and miquelon"
+            ],
+            [
+                "saint vincent and the grenadines"
+            ],
+            [
+                "samoa"
+            ],
+            [
+                "san marino"
+            ],
+            [
+                "sao tome and principe"
+            ],
+            [
+                "saudi arabia"
+            ],
+            [
+                "senegal"
+            ],
+            [
+                "seychelles"
+            ],
+            [
+                "sierra leone"
+            ],
+            [
+                "singapore"
+            ],
+            [
+                "slovakia"
+            ],
+            [
+                "slovenia"
+            ],
+            [
+                "solomon islands"
+            ],
+            [
+                "somalia"
+            ],
+            [
+                "south africa"
+            ],
+            [
+                "south georgia and the south sandwich islands"
+            ],
+            [
+                "south korea"
+            ],
+            [
+                "spain"
+            ],
+            [
+                "sri lanka"
+            ],
+            [
+                "sudan"
+            ],
+            [
+                "suriname"
+            ],
+            [
+                "svalbard and jan mayen"
+            ],
+            [
+                "swaziland"
+            ],
+            [
+                "sweden"
+            ],
+            [
+                "switzerland"
+            ],
+            [
+                "syria"
+            ],
+            [
+                "taiwan"
+            ],
+            [
+                "tajikistan"
+            ],
+            [
+                "tanzania"
+            ],
+            [
+                "thailand"
+            ],
+            [
+                "togo"
+            ],
+            [
+                "tokelau"
+            ],
+            [
+                "tonga"
+            ],
+            [
+                "trinidad and tobago"
+            ],
+            [
+                "tunisia"
+            ],
+            [
+                "turkey"
+            ],
+            [
+                "turkmenistan"
+            ],
+            [
+                "turks and caicos islands"
+            ],
+            [
+                "tuvalu"
+            ],
+            [
+                "uganda"
+            ],
+            [
+                "ukraine"
+            ],
+            [
+                "united arab emirates"
+            ],
+            [
+                "united kingdom"
+            ],
+            [
+                "united states"
+            ],
+            [
+                "united states minor outlying islands"
+            ],
+            [
+                "uruguay"
+            ],
+            [
+                "uzbekistan"
+            ],
+            [
+                "vanuatu"
+            ],
+            [
+                "venezuela"
+            ],
+            [
+                "vietnam"
+            ],
+            [
+                "virgin islands, british"
+            ],
+            [
+                "virgin islands, u.s."
+            ],
+            [
+                "wallis and futuna"
+            ],
+            [
+                "western sahara"
+            ],
+            [
+                "yemen"
+            ],
+            [
+                "yugoslavia"
+            ],
+            [
+                "zambia"
+            ],
+            [
+                "zimbabwe"
+            ]
+        ],
+        "predicted_data": [
+            [
+                "afghanistan"
+            ],
+            [
+                "albania"
+            ],
+            [
+                "algeria"
+            ],
+            [
+                "american samoa"
+            ],
+            [
+                "andorra"
+            ],
+            [
+                "angola"
+            ],
+            [
+                "anguilla"
+            ],
+            [
+                "antarctica"
+            ],
+            [
+                "antigua and barbuda"
+            ],
+            [
+                "argentina"
+            ],
+            [
+                "armenia"
+            ],
+            [
+                "aruba"
+            ],
+            [
+                "australia"
+            ],
+            [
+                "austria"
+            ],
+            [
+                "azerbaijan"
+            ],
+            [
+                "bahamas"
+            ],
+            [
+                "bahrain"
+            ],
+            [
+                "bangladesh"
+            ],
+            [
+                "barbados"
+            ],
+            [
+                "belarus"
+            ],
+            [
+                "belgium"
+            ],
+            [
+                "belize"
+            ],
+            [
+                "benin"
+            ],
+            [
+                "bermuda"
+            ],
+            [
+                "bhutan"
+            ],
+            [
+                "bolivia"
+            ],
+            [
+                "bosnia and herzegovina"
+            ],
+            [
+                "botswana"
+            ],
+            [
+                "bouvet island"
+            ],
+            [
+                "brazil"
+            ],
+            [
+                "british indian ocean territory"
+            ],
+            [
+                "brunei"
+            ],
+            [
+                "bulgaria"
+            ],
+            [
+                "burkina faso"
+            ],
+            [
+                "burundi"
+            ],
+            [
+                "cambodia"
+            ],
+            [
+                "cameroon"
+            ],
+            [
+                "canada"
+            ],
+            [
+                "cape verde"
+            ],
+            [
+                "cayman islands"
+            ],
+            [
+                "central african republic"
+            ],
+            [
+                "chad"
+            ],
+            [
+                "chile"
+            ],
+            [
+                "china"
+            ],
+            [
+                "christmas island"
+            ],
+            [
+                "cocos (keeling) islands"
+            ],
+            [
+                "colombia"
+            ],
+            [
+                "comoros"
+            ],
+            [
+                "congo"
+            ],
+            [
+                "congo, the democratic republic of the"
+            ],
+            [
+                "cook islands"
+            ],
+            [
+                "costa rica"
+            ],
+            [
+                "croatia"
+            ],
+            [
+                "cuba"
+            ],
+            [
+                "cyprus"
+            ],
+            [
+                "czech republic"
+            ],
+            [
+                "c\u00f4te d\u2019ivoire"
+            ],
+            [
+                "denmark"
+            ],
+            [
+                "djibouti"
+            ],
+            [
+                "dominica"
+            ],
+            [
+                "dominican republic"
+            ],
+            [
+                "east timor"
+            ],
+            [
+                "ecuador"
+            ],
+            [
+                "egypt"
+            ],
+            [
+                "el salvador"
+            ],
+            [
+                "equatorial guinea"
+            ],
+            [
+                "eritrea"
+            ],
+            [
+                "estonia"
+            ],
+            [
+                "ethiopia"
+            ],
+            [
+                "falkland islands"
+            ],
+            [
+                "faroe islands"
+            ],
+            [
+                "fiji islands"
+            ],
+            [
+                "finland"
+            ],
+            [
+                "france"
+            ],
+            [
+                "french guiana"
+            ],
+            [
+                "french polynesia"
+            ],
+            [
+                "french southern territories"
+            ],
+            [
+                "gabon"
+            ],
+            [
+                "gambia"
+            ],
+            [
+                "georgia"
+            ],
+            [
+                "germany"
+            ],
+            [
+                "ghana"
+            ],
+            [
+                "gibraltar"
+            ],
+            [
+                "greece"
+            ],
+            [
+                "greenland"
+            ],
+            [
+                "grenada"
+            ],
+            [
+                "guadeloupe"
+            ],
+            [
+                "guam"
+            ],
+            [
+                "guatemala"
+            ],
+            [
+                "guinea"
+            ],
+            [
+                "guinea-bissau"
+            ],
+            [
+                "guyana"
+            ],
+            [
+                "haiti"
+            ],
+            [
+                "heard island and mcdonald islands"
+            ],
+            [
+                "honduras"
+            ],
+            [
+                "hong kong"
+            ],
+            [
+                "hungary"
+            ],
+            [
+                "iceland"
+            ],
+            [
+                "india"
+            ],
+            [
+                "indonesia"
+            ],
+            [
+                "iran"
+            ],
+            [
+                "iraq"
+            ],
+            [
+                "ireland"
+            ],
+            [
+                "israel"
+            ],
+            [
+                "italy"
+            ],
+            [
+                "jamaica"
+            ],
+            [
+                "japan"
+            ],
+            [
+                "jordan"
+            ],
+            [
+                "kazakstan"
+            ],
+            [
+                "kenya"
+            ],
+            [
+                "kiribati"
+            ],
+            [
+                "kuwait"
+            ],
+            [
+                "kyrgyzstan"
+            ],
+            [
+                "laos"
+            ],
+            [
+                "latvia"
+            ],
+            [
+                "lebanon"
+            ],
+            [
+                "lesotho"
+            ],
+            [
+                "liberia"
+            ],
+            [
+                "libyan arab jamahiriya"
+            ],
+            [
+                "liechtenstein"
+            ],
+            [
+                "lithuania"
+            ],
+            [
+                "luxembourg"
+            ],
+            [
+                "macao"
+            ],
+            [
+                "macedonia"
+            ],
+            [
+                "madagascar"
+            ],
+            [
+                "malawi"
+            ],
+            [
+                "malaysia"
+            ],
+            [
+                "maldives"
+            ],
+            [
+                "mali"
+            ],
+            [
+                "malta"
+            ],
+            [
+                "marshall islands"
+            ],
+            [
+                "martinique"
+            ],
+            [
+                "mauritania"
+            ],
+            [
+                "mauritius"
+            ],
+            [
+                "mayotte"
+            ],
+            [
+                "mexico"
+            ],
+            [
+                "micronesia, federated states of"
+            ],
+            [
+                "moldova"
+            ],
+            [
+                "monaco"
+            ],
+            [
+                "mongolia"
+            ],
+            [
+                "montserrat"
+            ],
+            [
+                "morocco"
+            ],
+            [
+                "mozambique"
+            ],
+            [
+                "myanmar"
+            ],
+            [
+                "namibia"
+            ],
+            [
+                "nauru"
+            ],
+            [
+                "nepal"
+            ],
+            [
+                "netherlands"
+            ],
+            [
+                "netherlands antilles"
+            ],
+            [
+                "new caledonia"
+            ],
+            [
+                "new zealand"
+            ],
+            [
+                "nicaragua"
+            ],
+            [
+                "niger"
+            ],
+            [
+                "nigeria"
+            ],
+            [
+                "niue"
+            ],
+            [
+                "norfolk island"
+            ],
+            [
+                "north korea"
+            ],
+            [
+                "northern mariana islands"
+            ],
+            [
+                "norway"
+            ],
+            [
+                "oman"
+            ],
+            [
+                "pakistan"
+            ],
+            [
+                "palau"
+            ],
+            [
+                "palestine"
+            ],
+            [
+                "panama"
+            ],
+            [
+                "papua new guinea"
+            ],
+            [
+                "paraguay"
+            ],
+            [
+                "peru"
+            ],
+            [
+                "philippines"
+            ],
+            [
+                "pitcairn"
+            ],
+            [
+                "poland"
+            ],
+            [
+                "portugal"
+            ],
+            [
+                "puerto rico"
+            ],
+            [
+                "qatar"
+            ],
+            [
+                "romania"
+            ],
+            [
+                "russian federation"
+            ],
+            [
+                "rwanda"
+            ],
+            [
+                "r\u00e9union"
+            ],
+            [
+                "saint helena"
+            ],
+            [
+                "saint kitts and nevis"
+            ],
+            [
+                "saint lucia"
+            ],
+            [
+                "saint pierre and miquelon"
+            ],
+            [
+                "saint vincent and the grenadines"
+            ],
+            [
+                "samoa"
+            ],
+            [
+                "san marino"
+            ],
+            [
+                "sao tome and principe"
+            ],
+            [
+                "saudi arabia"
+            ],
+            [
+                "senegal"
+            ],
+            [
+                "seychelles"
+            ],
+            [
+                "sierra leone"
+            ],
+            [
+                "singapore"
+            ],
+            [
+                "slovakia"
+            ],
+            [
+                "slovenia"
+            ],
+            [
+                "solomon islands"
+            ],
+            [
+                "somalia"
+            ],
+            [
+                "south africa"
+            ],
+            [
+                "south georgia and the south sandwich islands"
+            ],
+            [
+                "south korea"
+            ],
+            [
+                "spain"
+            ],
+            [
+                "sri lanka"
+            ],
+            [
+                "sudan"
+            ],
+            [
+                "suriname"
+            ],
+            [
+                "svalbard and jan mayen"
+            ],
+            [
+                "swaziland"
+            ],
+            [
+                "sweden"
+            ],
+            [
+                "switzerland"
+            ],
+            [
+                "syria"
+            ],
+            [
+                "taiwan"
+            ],
+            [
+                "tajikistan"
+            ],
+            [
+                "tanzania"
+            ],
+            [
+                "thailand"
+            ],
+            [
+                "togo"
+            ],
+            [
+                "tokelau"
+            ],
+            [
+                "tonga"
+            ],
+            [
+                "trinidad and tobago"
+            ],
+            [
+                "tunisia"
+            ],
+            [
+                "turkey"
+            ],
+            [
+                "turkmenistan"
+            ],
+            [
+                "turks and caicos islands"
+            ],
+            [
+                "tuvalu"
+            ],
+            [
+                "uganda"
+            ],
+            [
+                "ukraine"
+            ],
+            [
+                "united arab emirates"
+            ],
+            [
+                "united kingdom"
+            ],
+            [
+                "united states"
+            ],
+            [
+                "united states minor outlying islands"
+            ],
+            [
+                "uruguay"
+            ],
+            [
+                "uzbekistan"
+            ],
+            [
+                "vanuatu"
+            ],
+            [
+                "venezuela"
+            ],
+            [
+                "vietnam"
+            ],
+            [
+                "virgin islands, british"
+            ],
+            [
+                "virgin islands, u.s."
+            ],
+            [
+                "wallis and futuna"
+            ],
+            [
+                "western sahara"
+            ],
+            [
+                "yemen"
+            ],
+            [
+                "yugoslavia"
+            ],
+            [
+                "zambia"
+            ],
+            [
+                "zimbabwe"
+            ]
+        ],
+        "execution_status": "Success"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "How many conductors are there?",
+        "query": "SELECT count(*) FROM conductor",
+        "predicted_query": "SELECT COUNT(*) FROM conductor;",
+        "ground_truth_data": [
+            [
+                "12"
+            ]
+        ],
+        "predicted_data": [
+            [
+                "12"
+            ]
+        ],
+        "execution_status": "Success"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the names of conductors whose nationalities are not \"USA\"?",
+        "query": "SELECT Name FROM conductor WHERE Nationality != 'USA'",
+        "predicted_query": "SELECT Name FROM conductor WHERE Nationality <> 'USA';",
+        "ground_truth_data": [
+            [
+                "charles dutoit"
+            ],
+            [
+                "igor stravinsky"
+            ],
+            [
+                "michael tilson thomas"
+            ],
+            [
+                "paul jorgensen"
+            ],
+            [
+                "pierre boulez"
+            ],
+            [
+                "robert craft"
+            ]
+        ],
+        "predicted_data": [
+            [
+                "charles dutoit"
+            ],
+            [
+                "igor stravinsky"
+            ],
+            [
+                "michael tilson thomas"
+            ],
+            [
+                "paul jorgensen"
+            ],
+            [
+                "pierre boulez"
+            ],
+            [
+                "robert craft"
+            ]
+        ],
+        "execution_status": "Success"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the maximum and minimum share of performances whose type is not \"Live final\".",
+        "query": "SELECT max(SHARE) ,  min(SHARE) FROM performance WHERE TYPE != \"Live final\"",
+        "predicted_query": "SELECT MAX(Share), MIN(Share) \nFROM performance \nWHERE Type <> 'Live final';",
+        "ground_truth_data": [
+            [
+                "44.7%",
+                "22.7%"
+            ]
+        ],
+        "predicted_data": [
+            [
+                "44.7%",
+                "22.7%"
+            ]
+        ],
+        "execution_status": "Success"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the names of conductors as well as the corresonding orchestras that they have conducted?",
+        "query": "SELECT T1.Name ,  T2.Orchestra FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID",
+        "predicted_query": "SELECT c.Name, o.Orchestra\nFROM conductor AS c\nJOIN orchestra AS o ON c.Conductor_ID = o.Conductor_ID;",
+        "ground_truth_data": [
+            [
+                "antal brown",
+                "detroit symphony orchestra"
+            ],
+            [
+                "antal dor\u00e1ti",
+                "london symphony orchestra"
+            ],
+            [
+                "charles dutoit",
+                "montreal symphony orchestra"
+            ],
+            [
+                "colin davis",
+                "royal concertgebouw orchestra"
+            ],
+            [
+                "gerard schwarz",
+                "seattle symphony orchestra"
+            ],
+            [
+                "igor stravinsky",
+                "columbia symphony orchestra"
+            ],
+            [
+                "michael tilson thomas",
+                "san francisco symphony orchestra"
+            ],
+            [
+                "paul jorgensen",
+                "royal danish orchestra"
+            ],
+            [
+                "pierre boulez",
+                "chicago symphony orchestra"
+            ],
+            [
+                "robert craft",
+                "philharmonia orchestra"
+            ],
+            [
+                "seiji ozawa",
+                "orchestre de paris"
+            ],
+            [
+                "valeri gergiev",
+                "kirov orchestra"
+            ]
+        ],
+        "predicted_data": [
+            [
+                "antal brown",
+                "detroit symphony orchestra"
+            ],
+            [
+                "antal dor\u00e1ti",
+                "london symphony orchestra"
+            ],
+            [
+                "charles dutoit",
+                "montreal symphony orchestra"
+            ],
+            [
+                "colin davis",
+                "royal concertgebouw orchestra"
+            ],
+            [
+                "gerard schwarz",
+                "seattle symphony orchestra"
+            ],
+            [
+                "igor stravinsky",
+                "columbia symphony orchestra"
+            ],
+            [
+                "michael tilson thomas",
+                "san francisco symphony orchestra"
+            ],
+            [
+                "paul jorgensen",
+                "royal danish orchestra"
+            ],
+            [
+                "pierre boulez",
+                "chicago symphony orchestra"
+            ],
+            [
+                "robert craft",
+                "philharmonia orchestra"
+            ],
+            [
+                "seiji ozawa",
+                "orchestre de paris"
+            ],
+            [
+                "valeri gergiev",
+                "kirov orchestra"
+            ]
+        ],
+        "execution_status": "Success"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What is the name of the conductor who has conducted the most orchestras?",
+        "query": "SELECT T1.Name FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID GROUP BY T2.Conductor_ID ORDER BY COUNT(*) DESC LIMIT 1",
+        "predicted_query": "SELECT c.Name\nFROM conductor AS c\nJOIN orchestra AS o ON c.Conductor_ID = o.Conductor_ID\nGROUP BY c.Conductor_ID, c.Name\nORDER BY COUNT(o.Orchestra_ID) DESC\nLIMIT 1;",
+        "ground_truth_data": [
+            [
+                "michael tilson thomas"
+            ]
+        ],
+        "predicted_data": [
+            [
+                "antal dor\u00e1ti"
+            ]
+        ],
+        "execution_status": "Success"
+    },
+    {
+        "db_id": "orchestra",
+        "question": "What are the orchestras that do not have any performances?",
+        "query": "SELECT Orchestra FROM orchestra WHERE Orchestra_ID NOT IN (SELECT Orchestra_ID FROM performance)",
+        "predicted_query": "SELECT Orchestra\nFROM orchestra\nWHERE Orchestra_ID NOT IN (SELECT Orchestra_ID FROM performance);",
+        "ground_truth_data": [
+            [
+                "san francisco symphony orchestra"
+            ]
+        ],
+        "predicted_data": [
+            [
+                "san francisco symphony orchestra"
+            ]
+        ],
+        "execution_status": "Success"
+    }
+]
