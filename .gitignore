@@ -3,13 +3,14 @@ venv/
 env/
 .env
 
-# Cache di Python
+
 __pycache__/
 *.pyc
 
-# Cartelle pesanti del dataset Spider (Fondamentale!)
+
 unusedDB/
 test_database/
 
-# Ignora anche i file nascosti di sistema (se usi Mac)
+
 .DS_Store
+
