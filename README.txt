@@ -16,3 +16,5 @@ pip install -r requirements.txt
 2. Download the local model via Ollama:
 
 ollama pull ibm/granite4.1:8b
+
+To run the program, run the script "run_pipeline.sh"
